@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Ecommerce.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ecommerce.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Ecommerce.Domain/Ecommerce.Domain.csproj",
+      "msbuildProject": "../Ecommerce.Domain/Ecommerce.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Ecommerce.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\azimz\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

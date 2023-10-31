@@ -1,0 +1,11 @@
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.deps.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.AssemblyInfo.cs
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\refint\Ecommerce.Domain.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\ref\Ecommerce.Domain.dll

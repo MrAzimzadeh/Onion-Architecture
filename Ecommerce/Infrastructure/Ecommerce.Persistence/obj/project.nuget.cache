@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "G2D3YIIkkXp9u3CiJgucTJRHqV+1hKVDo3bY6PL3nEQviFCpzL345jenmS1jGSMjQr+3EfoasDCO6zhi4Y42AA==",
+  "dgSpecHash": "IKOgYDWEySHbWN2trN6iB5ERJJvwj9c0qPyF+S83BaCPMl7r4Z2x7RzT99RxEwen6EPP8uxbvSpdXbq12OrRpA==",
   "success": true,
   "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Infrastructure\\Ecommerce.Persistence\\Ecommerce.Persistence.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\azimz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512"
+  ],
   "logs": []
 }

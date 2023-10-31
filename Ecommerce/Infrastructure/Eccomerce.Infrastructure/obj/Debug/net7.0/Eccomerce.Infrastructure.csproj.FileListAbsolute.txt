@@ -1,0 +1,11 @@
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\bin\Debug\net7.0\Eccomerce.Infrastructure.deps.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\bin\Debug\net7.0\Eccomerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\bin\Debug\net7.0\Eccomerce.Infrastructure.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.AssemblyInfo.cs
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\refint\Eccomerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\ref\Eccomerce.Infrastructure.dll
