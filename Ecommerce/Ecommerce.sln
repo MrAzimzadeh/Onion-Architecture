@@ -3,9 +3,58 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{987C920F-F4B7-4C4A-AE6D-0DA7C5900AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Domain", "Core\Ecommerce.Domain\Ecommerce.Domain.csproj", "{99A2926C-FD9E-4769-9334-350921B88B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eccomerce.Application", "Core\Eccomerce.Application\Eccomerce.Application.csproj", "{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{643E69E6-ED99-4046-9A31-028B914E2FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eccomerce.Infrastructure", "Infrastructure\Eccomerce.Infrastructure\Eccomerce.Infrastructure.csproj", "{E875E859-BDF3-41A6-B97A-0687B05EB34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Persistence", "Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj", "{D4BA1016-83DC-4165-BA7E-3B68C375AF05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AE017FC0-A9A8-4A83-87EB-83C49B5B814C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.API", "Presentation\Ecommerce.API\Ecommerce.API.csproj", "{157467B7-044F-45DE-B1E4-1CE1B79B5275}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99A2926C-FD9E-4769-9334-350921B88B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A2926C-FD9E-4769-9334-350921B88B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A2926C-FD9E-4769-9334-350921B88B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A2926C-FD9E-4769-9334-350921B88B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E875E859-BDF3-41A6-B97A-0687B05EB34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E875E859-BDF3-41A6-B97A-0687B05EB34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E875E859-BDF3-41A6-B97A-0687B05EB34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E875E859-BDF3-41A6-B97A-0687B05EB34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BA1016-83DC-4165-BA7E-3B68C375AF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BA1016-83DC-4165-BA7E-3B68C375AF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BA1016-83DC-4165-BA7E-3B68C375AF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BA1016-83DC-4165-BA7E-3B68C375AF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157467B7-044F-45DE-B1E4-1CE1B79B5275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157467B7-044F-45DE-B1E4-1CE1B79B5275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157467B7-044F-45DE-B1E4-1CE1B79B5275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157467B7-044F-45DE-B1E4-1CE1B79B5275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99A2926C-FD9E-4769-9334-350921B88B5E} = {987C920F-F4B7-4C4A-AE6D-0DA7C5900AB6}
+		{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF} = {987C920F-F4B7-4C4A-AE6D-0DA7C5900AB6}
+		{E875E859-BDF3-41A6-B97A-0687B05EB34C} = {643E69E6-ED99-4046-9A31-028B914E2FF2}
+		{D4BA1016-83DC-4165-BA7E-3B68C375AF05} = {643E69E6-ED99-4046-9A31-028B914E2FF2}
+		{157467B7-044F-45DE-B1E4-1CE1B79B5275} = {AE017FC0-A9A8-4A83-87EB-83C49B5B814C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD82B53F-7005-44D6-A7F5-E32345BC4C35}
