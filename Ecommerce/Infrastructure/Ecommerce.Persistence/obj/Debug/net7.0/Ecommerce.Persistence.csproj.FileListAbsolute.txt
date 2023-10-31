@@ -9,9 +9,11 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecom
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\refint\Ecommerce.Persistence.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\ref\Ecommerce.Persistence.dll
-C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Eccomerce.Application.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Domain.dll
-C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Eccomerce.Application.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Domain.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.csproj.AssemblyReference.cache
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.csproj.CopyComplete
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Persistence.runtimeconfig.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.genruntimeconfig.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecomerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecomerce.Application.pdb

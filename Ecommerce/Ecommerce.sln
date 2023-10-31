@@ -5,19 +5,19 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{987C920F-F4B7-4C4A-AE6D-0DA7C5900AB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Domain", "Core\Ecommerce.Domain\Ecommerce.Domain.csproj", "{99A2926C-FD9E-4769-9334-350921B88B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Domain", "Core\Ecommerce.Domain\Ecommerce.Domain.csproj", "{99A2926C-FD9E-4769-9334-350921B88B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eccomerce.Application", "Core\Eccomerce.Application\Eccomerce.Application.csproj", "{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomerce.Application", "Core\Eccomerce.Application\Ecomerce.Application.csproj", "{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{643E69E6-ED99-4046-9A31-028B914E2FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eccomerce.Infrastructure", "Infrastructure\Eccomerce.Infrastructure\Eccomerce.Infrastructure.csproj", "{E875E859-BDF3-41A6-B97A-0687B05EB34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eccomerce.Infrastructure", "Infrastructure\Eccomerce.Infrastructure\Eccomerce.Infrastructure.csproj", "{E875E859-BDF3-41A6-B97A-0687B05EB34C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Persistence", "Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj", "{D4BA1016-83DC-4165-BA7E-3B68C375AF05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Persistence", "Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj", "{D4BA1016-83DC-4165-BA7E-3B68C375AF05}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AE017FC0-A9A8-4A83-87EB-83C49B5B814C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.API", "Presentation\Ecommerce.API\Ecommerce.API.csproj", "{157467B7-044F-45DE-B1E4-1CE1B79B5275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.API", "Presentation\Ecommerce.API\Ecommerce.API.csproj", "{157467B7-044F-45DE-B1E4-1CE1B79B5275}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
