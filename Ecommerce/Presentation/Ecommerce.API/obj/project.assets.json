@@ -620,7 +620,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Ecommerce.Domain": "1.0.0"
+          "Ecommerce.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.13"
         },
         "compile": {
           "bin/placeholder/Ecomerce.Application.dll": {}

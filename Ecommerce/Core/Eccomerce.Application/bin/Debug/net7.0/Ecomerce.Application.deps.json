@@ -9,6 +9,7 @@
       "Ecomerce.Application/1.0.0": {
         "dependencies": {
           "Ecommerce.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13"
         },
         "runtime": {
