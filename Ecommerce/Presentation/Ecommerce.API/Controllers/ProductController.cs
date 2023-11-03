@@ -43,7 +43,10 @@ public class ProductController : ControllerBase
     [HttpGet("GetProductById")]
     public async Task<IActionResult> GetProductById(string id)
     {
-        Product product = await _productReadRepository.GetByIdAsync(id);
+        Product product = await _productReadRepository.GetByIdAsync("b2d0197a-c66d-4835-a447-333af9537256", tracking: false);
+        product.Name = "salam";
+        await _productWriteRepository.SaveChangesAsync();
+        
         return Ok(product);
     }
 }
