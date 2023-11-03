@@ -8,8 +8,7 @@ namespace Ecommerce.Persistence.Contexts
     public class EcommerceAPIDbContext : DbContext
     {
         public EcommerceAPIDbContext(DbContextOptions options) : base(options)
-        {
-        }
+        { }
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }

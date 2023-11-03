@@ -13,17 +13,18 @@ public static class ServiceRegistration
 {
     public static void AddPersistenceServices(this IServiceCollection services)
     {
+        // context 
         services.AddDbContext<EcommerceAPIDbContext>(options =>
-            options.UseNpgsql(Configuration.ConnectionString) ,  ServiceLifetime.Singleton);
+            options.UseNpgsql(Configuration.ConnectionString)); 
+        services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
+        services.AddScoped<ICustomerWriteReposiyory, CustomerWriteRepository>();
 
-        services.AddSingleton<ICustomerReadRepository, CustomerReadRepository>();
-        services.AddSingleton<ICustomerWriteReposiyory, CustomerWriteRepository>();
-        
-        services.AddSingleton<IOrderReadRepository, OrderReadRepository>();
-        services.AddSingleton<IOrderWriteRepository, OrderWriteRepository>();
-        
-        services.AddSingleton<IProductReadRepository, ProductReadRepository>();
-        services.AddSingleton<IProductWriteRepository, ProductWriteRepository>();
-        
+        // order
+        services.AddScoped<IOrderReadRepository, OrderReadRepository>();
+        services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+
+        // product
+        services.AddScoped<IProductReadRepository, ProductReadRepository>();
+        services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
     }
 }

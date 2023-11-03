@@ -1,4 +1,5 @@
 ﻿using Ecomerce.Application.Repositories.Products;
+using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.API.Controllers;
@@ -20,10 +21,9 @@ public class ProductController : ControllerBase
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
     }
-    
 
-    
-    [HttpGet]
+
+    [HttpGet("GetProducts")]
     public async Task<IActionResult> GetProducts()
     {
         await _productWriteRepository.AddRangeAsync(new()
@@ -36,7 +36,14 @@ public class ProductController : ControllerBase
             new() { Id = Guid.NewGuid(), Name = "Product 6 ", Price = 600, CreatedDate = DateTime.UtcNow, Stock = 10 },
             new() { Id = Guid.NewGuid(), Name = "Product 7 ", Price = 700, CreatedDate = DateTime.UtcNow, Stock = 10 },
         });
-        await _productWriteRepository.SaveChangesAsync();        
+        await _productWriteRepository.SaveChangesAsync();
         return Ok();
+    }
+
+    [HttpGet("GetProductById")]
+    public async Task<IActionResult> GetProductById(string id)
+    {
+        Product product = await _productReadRepository.GetByIdAsync(id);
+        return Ok(product);
     }
 }
