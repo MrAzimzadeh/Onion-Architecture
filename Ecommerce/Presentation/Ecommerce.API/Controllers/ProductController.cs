@@ -1,4 +1,6 @@
-﻿using Ecomerce.Application.Repositories.Products;
+﻿using System.Net;
+using Ecomerce.Application.Repositories.Products;
+using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,31 +25,48 @@ public class ProductController : ControllerBase
     }
 
 
-    [HttpGet("GetProducts")]
-    public  IActionResult GetProducts()
+    [HttpGet]
+    public IActionResult Get()
     {
-         _productWriteRepository.AddRange(new()
+        return Ok(_productReadRepository.GetAll(false));
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult Get(string id)
+    {
+        return Ok(_productReadRepository.GetById(id, false));
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> Post(VM_Create_Product createProduct)
+    {
+        await _productWriteRepository.AddAsync(new()
         {
-            new() { Id = Guid.NewGuid(), Name = "Product 1 ", Price = 100,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 2 ", Price = 200,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 3 ", Price = 300,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 4 ", Price = 400,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 5 ", Price = 500,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 6 ", Price = 600,  Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 7 ", Price = 700,  Stock = 10 },
+            Name = createProduct.Name,
+            Price = createProduct.Price,
+            Stock = createProduct.Stock
         });
-         _productWriteRepository.SaveChanges();
+        await _productWriteRepository.SaveChangesAsync();
+        return StatusCode((int)HttpStatusCode.Created);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Put(VM_Update_Product model)
+    {
+        Product product = await _productReadRepository.GetByIdAsync(model.Id, tracking: true);
+        product.Stock = model.Stock;
+        product.Price = model.Price;
+        product.Name = model.Name;
+        await _productWriteRepository.SaveChangesAsync();
         return Ok();
     }
 
-    [HttpGet("GetProductById")]
-    public async Task<IActionResult> GetProductById(string id)
+    [HttpDelete]
+    public async Task<IActionResult> Delete(string id)
     {
-        Product product =
-            await _productReadRepository.GetByIdAsync("b2d0197a-c66d-4835-a447-333af9537256", tracking: true);
-        product.Name = "salam";
-        await _productWriteRepository.SaveChangesAsync();
-
-        return Ok(product);
+      var a =   await _productWriteRepository.RemoveAsync(id);
+     var v =    await _productWriteRepository.SaveChangesAsync();
+        return Ok();
     }
 }
