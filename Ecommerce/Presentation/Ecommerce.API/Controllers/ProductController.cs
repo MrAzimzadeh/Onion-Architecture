@@ -24,19 +24,19 @@ public class ProductController : ControllerBase
 
 
     [HttpGet("GetProducts")]
-    public async Task<IActionResult> GetProducts()
+    public  IActionResult GetProducts()
     {
-        await _productWriteRepository.AddRangeAsync(new()
+         _productWriteRepository.AddRange(new()
         {
-            new() { Id = Guid.NewGuid(), Name = "Product 1 ", Price = 100, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 2 ", Price = 200, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 3 ", Price = 300, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 4 ", Price = 400, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 5 ", Price = 500, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 6 ", Price = 600, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            new() { Id = Guid.NewGuid(), Name = "Product 7 ", Price = 700, CreatedDate = DateTime.UtcNow, Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 1 ", Price = 100,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 2 ", Price = 200,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 3 ", Price = 300,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 4 ", Price = 400,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 5 ", Price = 500,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 6 ", Price = 600,  Stock = 10 },
+            new() { Id = Guid.NewGuid(), Name = "Product 7 ", Price = 700,  Stock = 10 },
         });
-        await _productWriteRepository.SaveChangesAsync();
+         _productWriteRepository.SaveChanges();
         return Ok();
     }
 
@@ -44,7 +44,7 @@ public class ProductController : ControllerBase
     public async Task<IActionResult> GetProductById(string id)
     {
         Product product =
-            await _productReadRepository.GetByIdAsync("b2d0197a-c66d-4835-a447-333af9537256", tracking: false);
+            await _productReadRepository.GetByIdAsync("b2d0197a-c66d-4835-a447-333af9537256", tracking: true);
         product.Name = "salam";
         await _productWriteRepository.SaveChangesAsync();
 
