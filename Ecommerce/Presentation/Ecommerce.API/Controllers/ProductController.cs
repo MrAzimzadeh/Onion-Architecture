@@ -62,7 +62,7 @@ public class ProductController : ControllerBase
         return Ok();
     }
 
-    [HttpDelete]
+    [HttpDelete] 
     public IActionResult Delete(string id)
     {
         var a = _productWriteRepository.Remove(id);
