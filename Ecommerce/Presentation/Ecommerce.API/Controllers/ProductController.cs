@@ -63,10 +63,10 @@ public class ProductController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<IActionResult> Delete(string id)
+    public IActionResult Delete(string id)
     {
-      var a =   await _productWriteRepository.RemoveAsync(id);
-     var v =    await _productWriteRepository.SaveChangesAsync();
+        var a = _productWriteRepository.Remove(id);
+        var v = _productWriteRepository.SaveChanges();
         return Ok();
     }
 }

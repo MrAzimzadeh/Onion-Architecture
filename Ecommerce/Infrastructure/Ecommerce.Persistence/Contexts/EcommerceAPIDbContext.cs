@@ -21,15 +21,25 @@ namespace Ecommerce.Persistence.Contexts
             var datas = ChangeTracker.Entries<BaseEntity>();
             foreach (var data in datas)
             {
-                _ = data.State switch
+                switch (data.State)
                 {
-                    EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
-                    EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow,
-                };
+                    case EntityState.Added:
+                        data.Entity.CreatedDate = DateTime.UtcNow;
+                        break;
+                    case EntityState.Modified:
+                        data.Entity.UpdateDate = DateTime.UtcNow;
+                        break;
+                    case EntityState.Deleted:
+                        break;
+                    default:
+                        // Handle any other states, or do nothing
+                        break;
+                }
             }
 
             return base.SaveChanges();
         }
+
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
