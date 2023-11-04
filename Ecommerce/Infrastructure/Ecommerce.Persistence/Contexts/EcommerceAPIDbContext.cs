@@ -28,31 +28,26 @@ namespace Ecommerce.Persistence.Contexts
                     _ => DateTime.UtcNow
                 };
             }
+
             return base.SaveChanges();
         }
-      
-    
 
 
-    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
-    {
-        // ChandeTracker => Entryiler  uzerinde  olan    Deyisiklikleri  ya da yeni  elave  olunmus  obyektleri  tapmaq  ucun  istifade  olunur
-        ChangeTracker.DetectChanges();
-        var datas = ChangeTracker.Entries<BaseEntity>();
-        foreach (var data in datas)
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
-            _ = data.State switch
+            // ChandeTracker => Entryiler  uzerinde  olan    Deyisiklikleri  ya da yeni  elave  olunmus  obyektleri  tapmaq  ucun  istifade  olunur
+            ChangeTracker.DetectChanges();
+            var datas = ChangeTracker.Entries<BaseEntity>();
+            foreach (var data in datas)
             {
-               
-                EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
-                EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow,
-                _ => DateTime.UtcNow
-            };
+                _ = data.State switch
+                {
+                    EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
+                    EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow,
+                    _ => DateTime.UtcNow
+                };
+            }
+            return await base.SaveChangesAsync(cancellationToken);
         }
-
-
-        return await base.SaveChangesAsync(cancellationToken);
     }
-}
-
 }
