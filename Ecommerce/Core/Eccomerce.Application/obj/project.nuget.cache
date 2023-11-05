@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mcOf7plNu8zbEl+lWgBoPS04Z+gk1tIzwkC/8LzBUrv+XNokwdTAzvNVS+8Zx/WcG9z1c3WVLFYaZvg+KtuHcQ==",
+  "dgSpecHash": "4ElVK9IHm19r+dm0ubOeuEIGddlSwAp9WL1jMQFOq3Az8mW2W8DVz06fbjgWnc2fyJyrd7xYOcekPHRk3rXiRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",

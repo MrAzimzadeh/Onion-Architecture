@@ -3,6 +3,7 @@ using Ecomerce.Application.Repositories.Products;
 using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.API.Controllers;
 
@@ -39,7 +40,7 @@ public class ProductController : ControllerBase
 
 
     [HttpPost]
-    public async Task<IActionResult> Post(VM_Create_Product createProduct)
+    public async Task<IActionResult> Post([FromBody]VM_Create_Product createProduct)
     {
         await _productWriteRepository.AddAsync(new()
         {
@@ -54,6 +55,10 @@ public class ProductController : ControllerBase
     [HttpPut]
     public async Task<IActionResult> Put(VM_Update_Product model)
     {
+        if (ModelState.IsValid)
+        {
+            Console.WriteLine();
+        }
         Product product = await _productReadRepository.GetByIdAsync(model.Id, tracking: true);
         product.Stock = model.Stock;
         product.Price = model.Price;

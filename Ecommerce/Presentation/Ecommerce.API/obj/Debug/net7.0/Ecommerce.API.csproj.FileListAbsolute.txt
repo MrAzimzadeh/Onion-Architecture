@@ -47,3 +47,8 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecomme
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Eccomerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Eccomerce.Infrastructure.pdb

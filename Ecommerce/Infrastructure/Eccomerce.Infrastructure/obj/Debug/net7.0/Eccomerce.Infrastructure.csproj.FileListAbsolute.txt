@@ -9,3 +9,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecco
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\refint\Eccomerce.Infrastructure.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\ref\Eccomerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Eccomerce.Infrastructure\obj\Debug\net7.0\Eccomerce.Infrastructure.csproj.AssemblyReference.cache
