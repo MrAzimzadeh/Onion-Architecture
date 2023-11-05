@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using Ecomerce.Application.Repositories.Products;
+using Ecomerce.Application.RequestParameters;
 using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +28,28 @@ public class ProductController : ControllerBase
 
 
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult Get([FromQuery] Pagination pagination)
     {
-        return Ok(_productReadRepository.GetAll(false));
+        var totalCount = _productReadRepository.GetAll(tracking: false).Count();
+
+        var products = _productReadRepository.GetAll(tracking: false)
+            .Skip(pagination.Page * pagination.Size)
+            .Take(pagination.Size)
+            .Select(z => new
+            {
+                z.Name,
+                z.CreatedDate,
+                z.UpdateDate,
+                z.Price,
+                z.Id,
+                z.Stock
+            });
+
+        return Ok(new
+        {
+            totalCount,
+            products
+        });
     }
 
     [HttpGet("{id}")]
@@ -40,7 +60,7 @@ public class ProductController : ControllerBase
 
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody]VM_Create_Product createProduct)
+    public async Task<IActionResult> Post([FromBody] VM_Create_Product createProduct)
     {
         await _productWriteRepository.AddAsync(new()
         {
@@ -59,6 +79,7 @@ public class ProductController : ControllerBase
         {
             Console.WriteLine();
         }
+
         Product product = await _productReadRepository.GetByIdAsync(model.Id, tracking: true);
         product.Stock = model.Stock;
         product.Price = model.Price;
@@ -67,7 +88,7 @@ public class ProductController : ControllerBase
         return Ok();
     }
 
-    [HttpDelete] 
+    [HttpDelete]
     public IActionResult Delete(string id)
     {
         var a = _productWriteRepository.Remove(id);
