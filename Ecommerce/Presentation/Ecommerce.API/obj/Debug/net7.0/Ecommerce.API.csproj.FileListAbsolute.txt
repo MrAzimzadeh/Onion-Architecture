@@ -52,3 +52,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecomme
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Eccomerce.Infrastructure.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Eccomerce.Infrastructure.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Ecommerce.API.staticwebassets.runtime.json

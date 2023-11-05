@@ -15,15 +15,17 @@ public class ProductController : ControllerBase
     //ctor injection hell 
     private readonly IProductWriteRepository _productWriteRepository;
     private readonly IProductReadRepository _productReadRepository;
+    private readonly IWebHostEnvironment _hostEnvironment;
 
     public ProductController
     (
         IProductWriteRepository productWriteRepository,
-        IProductReadRepository productReadRepository
-    )
+        IProductReadRepository productReadRepository,
+        IWebHostEnvironment hostEnvironment)
     {
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
+        _hostEnvironment = hostEnvironment;
     }
 
 
@@ -93,6 +95,33 @@ public class ProductController : ControllerBase
     {
         var a = _productWriteRepository.Remove(id);
         var v = _productWriteRepository.SaveChanges();
+        return Ok(new
+        {
+            // No Best Practice
+            message = "Delete Success"
+        });
+    }
+
+    [HttpPost("[action]")]
+    public async Task<IActionResult> Upload()
+    {
+        // wwwroot/resurce/product-images
+        string uploadPath = Path.Combine(_hostEnvironment.WebRootPath, "resurce/product-images");
+
+        if (!Directory.Exists(uploadPath))
+            Directory.CreateDirectory(uploadPath);
+
+        // Test 
+        Random random = new();
+        foreach (IFormFile file in Request.Form.Files)
+        {
+            string fullPath = Path.Combine(uploadPath, $"{random.NextDouble()}{Path.GetExtension(file.FileName)}");
+            using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None,
+                bufferSize: 1024 * 1024, useAsync: false);
+            await file.CopyToAsync(fileStream);
+            await fileStream.FlushAsync(); // 
+        }
+
         return Ok();
     }
 }
