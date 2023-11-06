@@ -1,4 +1,5 @@
 using Eccomerce.Infrastructure.Filters;
+using Eccomerce.Infrastructure.ServiceRegistration;
 using Ecomerce.Application.Validators.Products;
 using Ecommerce.Persistence.ServiceRegistrations;
 using FluentValidation.AspNetCore;
@@ -7,6 +8,7 @@ using FluentValidation.Results;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
+builder.Services.AddInfrastructureService();
 
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
     // Fluentvalidation  Confugrations 

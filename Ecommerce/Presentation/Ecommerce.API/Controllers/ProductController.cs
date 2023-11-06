@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using Ecomerce.Application.Repositories.Products;
 using Ecomerce.Application.RequestParameters;
+using Ecomerce.Application.Services;
 using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -16,16 +17,19 @@ public class ProductController : ControllerBase
     private readonly IProductWriteRepository _productWriteRepository;
     private readonly IProductReadRepository _productReadRepository;
     private readonly IWebHostEnvironment _hostEnvironment;
+    private readonly IFileService _fileService;
 
     public ProductController
     (
         IProductWriteRepository productWriteRepository,
         IProductReadRepository productReadRepository,
-        IWebHostEnvironment hostEnvironment)
+        IWebHostEnvironment hostEnvironment,
+        IFileService fileService)
     {
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
         _hostEnvironment = hostEnvironment;
+        _fileService = fileService;
     }
 
 
@@ -105,23 +109,9 @@ public class ProductController : ControllerBase
     [HttpPost("[action]")]
     public async Task<IActionResult> Upload()
     {
-        // wwwroot/resurce/product-images
-        string uploadPath = Path.Combine(_hostEnvironment.WebRootPath, "resurce/product-images");
 
-        if (!Directory.Exists(uploadPath))
-            Directory.CreateDirectory(uploadPath);
 
-        // Test 
-        Random random = new();
-        foreach (IFormFile file in Request.Form.Files)
-        {
-            string fullPath = Path.Combine(uploadPath, $"{random.NextDouble()}{Path.GetExtension(file.FileName)}");
-            using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None,
-                bufferSize: 1024 * 1024, useAsync: false);
-            await file.CopyToAsync(fileStream);
-            await fileStream.FlushAsync(); // 
-        }
-
+        await _fileService.UploadAsync("resurce\\product-images",  Request.Form.Files);
         return Ok();
     }
 }

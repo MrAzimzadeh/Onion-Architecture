@@ -19,4 +19,12 @@
     <ProjectReference Include="..\..\Core\Eccomerce.Application\Ecomerce.Application.csproj" />
   </ItemGroup>
 
+
+
+
+
+
+
+
+
 </Project>
