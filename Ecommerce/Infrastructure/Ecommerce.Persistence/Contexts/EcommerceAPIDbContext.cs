@@ -2,6 +2,7 @@
 using Ecommerce.Domain.Entities.Common;
 using Ecommerce.Persistence.Migrations;
 using Microsoft.EntityFrameworkCore;
+using File = Ecommerce.Domain.Entities.File;
 
 
 namespace Ecommerce.Persistence.Contexts
@@ -15,7 +16,13 @@ namespace Ecommerce.Persistence.Contexts
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
-
+        
+        public DbSet<File> Files { get; set; }
+        public DbSet<InvoiceFile> InvoiceFiles { get; set; }
+        public DbSet<ProductImageFile> ProductImageFiles { get; set; }
+        
+            
+        
         public override int SaveChanges()
         {
             var datas = ChangeTracker.Entries<BaseEntity>();
