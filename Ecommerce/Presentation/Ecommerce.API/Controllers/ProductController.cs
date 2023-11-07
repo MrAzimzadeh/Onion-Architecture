@@ -109,8 +109,6 @@ public class ProductController : ControllerBase
     [HttpPost("[action]")]
     public async Task<IActionResult> Upload()
     {
-
-
         await _fileService.UploadAsync("resurce\\product-images",  Request.Form.Files);
         return Ok();
     }
