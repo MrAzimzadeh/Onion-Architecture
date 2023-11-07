@@ -1,6 +1,6 @@
 ﻿namespace Ecommerce.Domain.Entities;
 
-public class ProductImage : File
+public class ProductImageFile : File
 {
-
+    
 }

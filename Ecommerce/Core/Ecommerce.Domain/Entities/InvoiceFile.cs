@@ -1,6 +1,7 @@
 ﻿namespace Ecommerce.Domain.Entities;
 
-public class InvoiceFile
+public class InvoiceFile : File
 {
+    public decimal Price { get; set; }
     
 }
