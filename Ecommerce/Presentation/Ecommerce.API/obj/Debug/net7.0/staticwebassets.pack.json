@@ -1,44 +1,32 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-2.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007-2.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\3415007-2.jpg",
+      "PackagePath": "staticwebassets\\resurce\\File\\3415007-2.jpg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-3.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007-3.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\3415007.jpg",
+      "PackagePath": "staticwebassets\\resurce\\File\\3415007.jpg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-4.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007-4.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\ButtonSplash-2.svg",
+      "PackagePath": "staticwebassets\\resurce\\File\\ButtonSplash-2.svg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-5.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007-5.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\ButtonSplash.svg",
+      "PackagePath": "staticwebassets\\resurce\\File\\ButtonSplash.svg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-6.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007-6.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Ellipse-1-2.svg",
+      "PackagePath": "staticwebassets\\resurce\\File\\Ellipse-1-2.svg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007.jpg",
-      "PackagePath": "staticwebassets\\resurce\\invoice-images\\3415007.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Ellipse-1.svg",
+      "PackagePath": "staticwebassets\\resurce\\File\\Ellipse-1.svg"
     },
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-2.jpg",
-      "PackagePath": "staticwebassets\\resurce\\product-images\\3415007-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-3.jpg",
-      "PackagePath": "staticwebassets\\resurce\\product-images\\3415007-3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-4.jpg",
-      "PackagePath": "staticwebassets\\resurce\\product-images\\3415007-4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007.jpg",
-      "PackagePath": "staticwebassets\\resurce\\product-images\\3415007.jpg"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Frame-4-1.svg",
+      "PackagePath": "staticwebassets\\resurce\\File\\Frame-4-1.svg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ecommerce.API.Microsoft.AspNetCore.StaticWebAssets.props",

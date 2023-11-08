@@ -135,6 +135,7 @@ namespace Eccomerce.Infrastructure.Services
             _webHostEnvironment = webHostEnvironment;
         }
 
+
         public async Task<bool> CopyFileAsync(string path, IFormFile file)
         {
             try
@@ -150,6 +151,74 @@ namespace Eccomerce.Infrastructure.Services
                 Console.WriteLine(ex.Message);
                 throw ex;
             }
+        }
+
+        public async Task<(string fileName, string path)> UploadAsync(string path, IFormFile file)
+        {
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, path);
+            if (!Directory.Exists(uploadPath))
+                Directory.CreateDirectory(uploadPath);
+
+            string fileNewName = await GenerateNewFileNameAsync(uploadPath, file.FileName);
+
+            bool result = await CopyFileAsync(Path.Combine(uploadPath, fileNewName), file);
+
+            if (result)
+            {
+                return (fileNewName, Path.Combine(path, fileNewName));
+            }
+
+            // todo IResult  
+            throw new Exception("Error");
+        }
+
+        public (string fileName, string path) Upload(string path, IFormFile file)
+        {
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, path);
+            if (!Directory.Exists(uploadPath))
+                Directory.CreateDirectory(uploadPath);
+
+            string fileNewName =
+                GenerateNewFileNameAsync(uploadPath, file.FileName).Result; // Eş zamanlı işlemi bekler.
+
+            bool result = CopyFileAsync(Path.Combine(uploadPath, fileNewName), file)
+                .Result; // Eş zamanlı işlemi bekler.
+
+            if (result)
+            {
+                return (fileNewName, Path.Combine(path, fileNewName));
+            }
+
+
+            // todo Error (Iresult )
+            throw new Exception("Error");
+        }
+
+        public async Task<List<(string fileName, string path)>> UploadRangeAsync(string path, IFormFileCollection files)
+        {
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, path);
+            if (!Directory.Exists(uploadPath))
+                Directory.CreateDirectory(uploadPath);
+
+            List<(string fileName, string path)> datas = new List<(string fileName, string path)>();
+
+            foreach (IFormFile file in files)
+            {
+                string fileNewName = await GenerateNewFileNameAsync(uploadPath, file.FileName);
+
+                bool result = await CopyFileAsync(Path.Combine(uploadPath, fileNewName), file);
+
+                if (result)
+                {
+                    datas.Add((fileNewName, Path.Combine(path, fileNewName)));
+                }
+                else
+                {
+                    Console.WriteLine("Error");
+                }
+            }
+
+            return datas;
         }
 
         private async Task<string> GenerateNewFileNameAsync(string path, string fileName)

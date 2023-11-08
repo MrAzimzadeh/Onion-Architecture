@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vZ8oCjNnoEeh9BfaCAG/0hpcjnGQjcbBAYgoQU4UB/0=",
+  "Hash": "DpaB1+lsHSoq1n5CEO+1Xgy2MhHt6nGgo2ouoR89sIs=",
   "Source": "Ecommerce.API",
   "BasePath": "_content/Ecommerce.API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-2.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\3415007-2.jpg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007-2.jpg",
+      "RelativePath": "resurce/File/3415007-2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007-2.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\3415007-2.jpg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-3.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\3415007.jpg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007-3.jpg",
+      "RelativePath": "resurce/File/3415007.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,15 +48,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007-3.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\3415007.jpg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-4.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\ButtonSplash-2.svg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007-4.jpg",
+      "RelativePath": "resurce/File/ButtonSplash-2.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007-4.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\ButtonSplash-2.svg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-5.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\ButtonSplash.svg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007-5.jpg",
+      "RelativePath": "resurce/File/ButtonSplash.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007-5.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\ButtonSplash.svg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007-6.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Ellipse-1-2.svg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007-6.jpg",
+      "RelativePath": "resurce/File/Ellipse-1-2.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007-6.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\Ellipse-1-2.svg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\invoice-images\\3415007.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Ellipse-1.svg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/invoice-images/3415007.jpg",
+      "RelativePath": "resurce/File/Ellipse-1.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\invoice-images\\3415007.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\Ellipse-1.svg"
     },
     {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-2.jpg",
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\File\\Frame-4-1.svg",
       "SourceId": "Ecommerce.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
       "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/product-images/3415007-2.jpg",
+      "RelativePath": "resurce/File/Frame-4-1.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,58 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\product-images\\3415007-2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-3.jpg",
-      "SourceId": "Ecommerce.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
-      "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/product-images/3415007-3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\product-images\\3415007-3.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007-4.jpg",
-      "SourceId": "Ecommerce.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
-      "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/product-images/3415007-4.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\product-images\\3415007-4.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\product-images\\3415007.jpg",
-      "SourceId": "Ecommerce.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\",
-      "BasePath": "_content/Ecommerce.API",
-      "RelativePath": "resurce/product-images/3415007.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resurce\\product-images\\3415007.jpg"
+      "OriginalItemSpec": "wwwroot\\resurce\\File\\Frame-4-1.svg"
     }
   ]
 }
