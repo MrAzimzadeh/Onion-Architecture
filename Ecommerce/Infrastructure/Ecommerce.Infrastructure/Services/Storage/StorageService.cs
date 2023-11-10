@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Ecomerce.Infrastructure.Services.Storage;
 
-public class StorageService : IStorageService, IStorage
+public class StorageService : IStorageService
 {
     private readonly IStorage _storage;
 

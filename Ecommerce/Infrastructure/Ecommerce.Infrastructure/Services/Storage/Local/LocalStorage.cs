@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Ecomerce.Infrastructure.StaticService;
 using Ecommerce.Application.Abstractions.Storeg.Local;
 using Microsoft.AspNetCore.Hosting;

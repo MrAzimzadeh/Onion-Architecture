@@ -1,4 +1,11 @@
 
+using Ecomerce.Application.Validators.Products;
+using Ecomerce.Infrastructure.Filters;
+using Ecomerce.Infrastructure.ServiceRegistration;
+using Ecommerce.Infrastructure.Services.Storage.Local;
+using Ecommerce.Persistence.ServiceRegistrations;
+using FluentValidation.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();

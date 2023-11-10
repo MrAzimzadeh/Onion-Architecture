@@ -26,4 +26,9 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Content Include="obj\project.packagespec.json" />
+  </ItemGroup>
+
 </Project>

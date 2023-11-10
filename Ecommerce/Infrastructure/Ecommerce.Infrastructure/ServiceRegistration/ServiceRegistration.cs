@@ -1,5 +1,4 @@
-﻿
-using Ecomerce.Application.Services;
+﻿using Ecomerce.Application.Services;
 using Ecomerce.Infrastructure.Enums;
 using Ecomerce.Infrastructure.Services;
 using Ecomerce.Infrastructure.Services.Storage;
@@ -13,7 +12,7 @@ public static class ServiceRegistration
 {
     public static void AddInfrastructureService(this IServiceCollection serviceCollection)
     {
-        serviceCollection.AddScoped<IStorage, StorageService>();
+        serviceCollection.AddScoped<IStorageService, StorageService>();
         serviceCollection.AddScoped<IFileService, FileService>();
     }
 

@@ -1,0 +1,17 @@
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Infrastructure.deps.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Infrastructure.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Domain.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Application.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\bin\Debug\net7.0\Ecommerce.Domain.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.AssemblyInfo.cs
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.csproj.CopyComplete
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\refint\Ecommerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\ref\Ecommerce.Infrastructure.dll
