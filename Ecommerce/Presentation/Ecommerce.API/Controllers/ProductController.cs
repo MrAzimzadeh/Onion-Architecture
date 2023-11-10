@@ -39,7 +39,8 @@ public class ProductController : ControllerBase
         IProductImageFileReadRepository productImageFileReadRepository,
         IFileProductImageWriteRepository fileProductImageWriteRepository,
         IInvoiceFileReadRepository invoiceFileReadRepository,
-        IInvoiceFileWriteRepository invoiceFileWriteRepository)
+        IInvoiceFileWriteRepository invoiceFileWriteRepository, 
+        IStorageService storageService)
     {
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
@@ -51,6 +52,7 @@ public class ProductController : ControllerBase
         _fileProductImageWriteRepository = fileProductImageWriteRepository;
         _invoiceFileReadRepository = invoiceFileReadRepository;
         _invoiceFileWriteRepository = invoiceFileWriteRepository;
+        _storageService = storageService;
     }
 
 

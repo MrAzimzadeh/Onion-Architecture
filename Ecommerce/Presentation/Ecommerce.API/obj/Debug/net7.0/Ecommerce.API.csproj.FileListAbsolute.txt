@@ -52,3 +52,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecomme
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\Ecommerce.API.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\Ecommerce.API.genruntimeconfig.cache
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\ref\Ecommerce.API.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Ecommerce.API.staticwebassets.runtime.json

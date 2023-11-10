@@ -1,4 +1,3 @@
-
 using Ecomerce.Infrastructure.StaticService;
 using Ecommerce.Application.Abstractions.Storeg.Local;
 using Microsoft.AspNetCore.Hosting;
@@ -8,64 +7,48 @@ namespace Ecommerce.Infrastructure.Services.Storage.Local;
 
 public class LocalStorage : ILocalStorege
 {
-    public readonly IWebHostEnvironment _webHostEnvironment;
+    private readonly IWebHostEnvironment _webHostEnvironment;
 
     public LocalStorage(IWebHostEnvironment webHostEnvironment)
     {
         _webHostEnvironment = webHostEnvironment;
     }
 
-    public async Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string pathOrContainer,
-        IFormFileCollection files)
+
+    public async Task DeleteAsync(string path, string fileName)
+        => File.Delete($"{path}\\{fileName}");
+
+    public List<string> GetFiles(string path)
     {
-        string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, pathOrContainer);
-        if (!Directory.Exists(uploadPath))
-            Directory.CreateDirectory(uploadPath);
-
-        List<(string fileName, string path)> datas = new();
-        foreach (IFormFile file in files)
-        {
-            // string fileNewName = await GenerateNewFileNameAsync(uploadPath, file.FileName);
-            bool result = await CopyFileAsync(Path.Combine(uploadPath, file.Name), file);
-            datas.Add((file.Name, Path.Combine(pathOrContainer, file.Name)));
-        }
-
-        return datas;
+        DirectoryInfo directory = new(path);
+        return directory.GetFiles().Select(f => f.Name).ToList();
     }
 
+    public bool HasFile(string path, string fileName)
+        => File.Exists($"{path}\\{fileName}");
 
-    public async Task DeleteAsync(string pathOrContainer, string fileName)
-        => File.Delete($"{pathOrContainer}\\{fileName}");
-
-
-    public List<string> GetFiles(string pathOrContainer)
-    {
-        DirectoryInfo directoryInfo = new(pathOrContainer);
-        return directoryInfo.GetFiles().Select(f => f.Name).ToList();
-    }
-
-    public bool HasFile(string pathOrContainer, string fileName)
-        => File.Exists($"{pathOrContainer}\\{fileName}");
-
-
-    // private 
-    public async Task<bool> CopyFileAsync(string path, IFormFile file)
+    private async Task<bool> CopyFileAsync(string path, IFormFile file)
     {
         try
         {
-            using FileStream fileStream = new(path, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024,
-                useAsync: false);
+            // Generate a new sanitized file name
+            string newFileName = await GenerateNewFileNameAsync(Path.GetDirectoryName(path), file.FileName);
+
+            // Combine the path with the new file name
+            string newPath = Path.Combine(Path.GetDirectoryName(path), newFileName);
+
+            await using FileStream fileStream = new(newPath, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
+
             await file.CopyToAsync(fileStream);
             await fileStream.FlushAsync();
             return true;
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            //todo log!
             throw ex;
         }
     }
-
     private async Task<string> GenerateNewFileNameAsync(string path, string fileName)
     {
         string extension = Path.GetExtension(fileName);
@@ -81,5 +64,23 @@ public class LocalStorage : ILocalStorege
         }
 
         return newFileName;
+    }
+
+
+    public async Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string pathOrContainer,
+        IFormFileCollection files)
+    {
+        string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, pathOrContainer);
+        if (!Directory.Exists(uploadPath))
+            Directory.CreateDirectory(uploadPath);
+
+        List<(string fileName, string path)> datas = new();
+        foreach (IFormFile file in files)
+        {
+            await CopyFileAsync($"{uploadPath}\\{file.Name}", file);
+            datas.Add((file.Name, $"{pathOrContainer}\\{file.Name}"));
+        }
+
+        return datas;
     }
 }
