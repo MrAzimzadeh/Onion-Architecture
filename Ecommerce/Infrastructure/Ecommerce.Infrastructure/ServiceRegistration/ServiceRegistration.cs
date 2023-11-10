@@ -2,6 +2,7 @@ using Ecomerce.Application.Services;
 using Ecomerce.Infrastructure.Enums;
 using Ecomerce.Infrastructure.Services;
 using Ecomerce.Infrastructure.Services.Storage;
+using Ecomerce.Infrastructure.Services.Storage.Azure;
 using Ecommerce.Application.Abstractions.Storeg;
 using Ecommerce.Infrastructure.Services.Storage.Local;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,7 +31,7 @@ public static class ServiceRegistration
                 serviceCollection.AddScoped<IStorage, LocalStorage>();
                 break;
             case StorageType.Azure:
-                serviceCollection.AddScoped<IStorage>();
+                serviceCollection.AddScoped<IStorage, AzureStorage>();
                 break;
             case StorageType.Aws:
                 serviceCollection.AddScoped<IStorage>();

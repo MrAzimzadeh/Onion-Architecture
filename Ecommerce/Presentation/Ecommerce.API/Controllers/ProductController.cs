@@ -142,7 +142,7 @@ public class ProductController : ControllerBase
         // await _fileProductImageWriteRepository.SaveChangesAsync();
 
 
-        var data = await _storageService.UploadRangeAsync("resurce/ProductIMage", Request.Form.Files);
+        var data = await _storageService.UploadRangeAsync("files", Request.Form.Files);
         await _fileWriteRepository.AddRangeAsync(data.Select(z => new Ecommerce.Domain.Entities.File()
         {
             FileName = z.fileName,

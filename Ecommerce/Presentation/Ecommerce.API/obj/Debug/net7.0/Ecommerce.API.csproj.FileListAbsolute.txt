@@ -53,3 +53,9 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecomme
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\Ecommerce.API.genruntimeconfig.cache
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\ref\Ecommerce.API.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Ecommerce.API.staticwebassets.runtime.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Azure.Storage.Blobs.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\System.Memory.Data.dll

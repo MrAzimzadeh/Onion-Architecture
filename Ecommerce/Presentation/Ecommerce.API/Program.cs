@@ -1,7 +1,7 @@
-
 using Ecomerce.Application.Validators.Products;
 using Ecomerce.Infrastructure.Filters;
 using Ecomerce.Infrastructure.ServiceRegistration;
+using Ecomerce.Infrastructure.Services.Storage.Azure;
 using Ecommerce.Infrastructure.Services.Storage.Local;
 using Ecommerce.Persistence.ServiceRegistrations;
 using FluentValidation.AspNetCore;
@@ -13,7 +13,7 @@ builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureService();
 
 
-builder.Services.AddStorage<LocalStorage>();
+builder.Services.AddStorage<AzureStorage>();
 
 
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())

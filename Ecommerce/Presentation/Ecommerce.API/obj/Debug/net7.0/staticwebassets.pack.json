@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\3415007-2.jpg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\3415007-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\3415007.jpg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\3415007.jpg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\ButtonSplash-2.svg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\ButtonSplash-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\ButtonSplash.svg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\ButtonSplash.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\Ellipse-1-2.svg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\Ellipse-1-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\Ellipse-1.svg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\Ellipse-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\resurce\\ProductIMage\\Frame-4-1.svg",
+      "PackagePath": "staticwebassets\\resurce\\ProductIMage\\Frame-4-1.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ecommerce.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Ecommerce.API.props",
+      "PackagePath": "build\\Ecommerce.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Ecommerce.API.props",
+      "PackagePath": "buildMultiTargeting\\Ecommerce.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Ecommerce.API.props",
+      "PackagePath": "buildTransitive\\Ecommerce.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

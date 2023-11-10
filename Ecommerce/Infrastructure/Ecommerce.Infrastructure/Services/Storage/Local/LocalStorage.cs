@@ -37,7 +37,8 @@ public class LocalStorage : ILocalStorege
             // Combine the path with the new file name
             string newPath = Path.Combine(Path.GetDirectoryName(path), newFileName);
 
-            await using FileStream fileStream = new(newPath, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
+            await using FileStream fileStream = new(newPath, FileMode.Create, FileAccess.Write, FileShare.None,
+                1024 * 1024, useAsync: false);
 
             await file.CopyToAsync(fileStream);
             await fileStream.FlushAsync();
@@ -49,6 +50,7 @@ public class LocalStorage : ILocalStorege
             throw ex;
         }
     }
+
     private async Task<string> GenerateNewFileNameAsync(string path, string fileName)
     {
         string extension = Path.GetExtension(fileName);
