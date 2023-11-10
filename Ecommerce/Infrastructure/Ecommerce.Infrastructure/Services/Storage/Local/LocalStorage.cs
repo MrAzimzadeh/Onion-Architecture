@@ -1,4 +1,4 @@
-﻿
+
 using Ecomerce.Infrastructure.StaticService;
 using Ecommerce.Application.Abstractions.Storeg.Local;
 using Microsoft.AspNetCore.Hosting;
