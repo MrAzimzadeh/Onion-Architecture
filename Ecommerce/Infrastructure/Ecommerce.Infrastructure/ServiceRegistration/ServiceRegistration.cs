@@ -1,9 +1,10 @@
-﻿using Ecomerce.Application.Abstractions.Storeg;
+﻿
 using Ecomerce.Application.Services;
 using Ecomerce.Infrastructure.Enums;
 using Ecomerce.Infrastructure.Services;
 using Ecomerce.Infrastructure.Services.Storage;
-using Ecomerce.Infrastructure.Services.Storage.Local;
+using Ecommerce.Application.Abstractions.Storeg;
+using Ecommerce.Infrastructure.Services.Storage.Local;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecomerce.Infrastructure.ServiceRegistration;
@@ -13,6 +14,7 @@ public static class ServiceRegistration
     public static void AddInfrastructureService(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddScoped<IStorage, StorageService>();
+        serviceCollection.AddScoped<IFileService, FileService>();
     }
 
     public static void AddStorage<T>(this IServiceCollection serviceCollection)

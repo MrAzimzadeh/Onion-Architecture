@@ -1,9 +1,14 @@
-﻿using Ecomerce.Application.Abstractions.Storeg.Local;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Ecomerce.Infrastructure.StaticService;
+using Ecommerce.Application.Abstractions.Storeg.Local;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
-namespace Ecomerce.Infrastructure.Services.Storage.Local;
+namespace Ecommerce.Infrastructure.Services.Storage.Local;
 
 public class LocalStorage : ILocalStorege
 {

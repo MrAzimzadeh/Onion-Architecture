@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using Ecomerce.Application.Repositories.File;
 using Ecomerce.Application.Repositories.InvoiceFile;
 using Ecomerce.Application.Repositories.ProductImageFile;
@@ -6,11 +7,8 @@ using Ecomerce.Application.Repositories.Products;
 using Ecomerce.Application.RequestParameters;
 using Ecomerce.Application.Services;
 using Ecomerce.Application.ViewModels.Products;
-using Ecomerce.Infrastructure.Services.Storage;
+using Ecommerce.Application.Abstractions.Storeg;
 using Ecommerce.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Ecommerce.API.Controllers;
 
@@ -40,7 +38,8 @@ public class ProductController : ControllerBase
         IFileWriteRepository fileWriteRepository,
         IProductImageFileReadRepository productImageFileReadRepository,
         IFileProductImageWriteRepository fileProductImageWriteRepository,
-        IInvoiceFileReadRepository invoiceFileReadRepository, IInvoiceFileWriteRepository invoiceFileWriteRepository)
+        IInvoiceFileReadRepository invoiceFileReadRepository,
+        IInvoiceFileWriteRepository invoiceFileWriteRepository)
     {
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
@@ -131,15 +130,24 @@ public class ProductController : ControllerBase
     [HttpPost("[action]")]
     public async Task<IActionResult> Upload()
     {
-        var datas = await _fileService.UploadRangeAsync("resurce\\ProductIMage", Request.Form.Files);
+        // var datas = await _fileService.UploadRangeAsync("resurce\\ProductIMage", Request.Form.Files);
+        //
+        // await _fileWriteRepository.AddRangeAsync(datas.Select(z => new Ecommerce.Domain.Entities.File()
+        // {
+        //     FileName = z.fileName,
+        //     Path = z.path,
+        // }).ToList());
+        // await _fileProductImageWriteRepository.SaveChangesAsync();
 
-        await _fileWriteRepository.AddRangeAsync(datas.Select(z => new Ecommerce.Domain.Entities.File()
+
+        var data = await _storageService.UploadRangeAsync("resurce/ProductIMage", Request.Form.Files);
+        await _fileWriteRepository.AddRangeAsync(data.Select(z => new Ecommerce.Domain.Entities.File()
         {
             FileName = z.fileName,
-            Path = z.path,
+            Path = z.pathOrContainer,
+            Storage = _storageService.StorageName
         }).ToList());
-        await _fileProductImageWriteRepository.SaveChangesAsync();
-
+        await _fileWriteRepository.SaveChangesAsync();
         return Ok();
     }
 

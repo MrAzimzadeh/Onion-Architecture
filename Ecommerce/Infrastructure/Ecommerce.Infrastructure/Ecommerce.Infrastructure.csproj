@@ -17,7 +17,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Eccomerce.Application\Ecommerce.Application.csproj" />
+    <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
   <ItemGroup>
     <Folder Include="Services\Storage\AWS\" />
     <Folder Include="Services\Storage\Azure\" />

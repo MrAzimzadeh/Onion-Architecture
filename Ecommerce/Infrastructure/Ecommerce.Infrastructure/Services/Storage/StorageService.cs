@@ -1,9 +1,11 @@
-﻿using Ecomerce.Application.Abstractions.Storeg;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Ecommerce.Application.Abstractions.Storeg;
 using Microsoft.AspNetCore.Http;
 
 namespace Ecomerce.Infrastructure.Services.Storage;
 
-public class StorageService : IStorageService
+public class StorageService : IStorageService, IStorage
 {
     private readonly IStorage _storage;
 
@@ -25,4 +27,10 @@ public class StorageService : IStorageService
 
     public bool HasFile(string pathOrContainer, string fileName)
         => _storage.HasFile(pathOrContainer, fileName);
+
+    public string StorageName
+    {
+        get => _storage.GetType().Name;
+    }
+    
 }

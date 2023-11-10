@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Ecomerce.Application.Abstractions.Storeg;
+namespace Ecommerce.Application.Abstractions.Storeg;
 
 public interface IStorage
 {
