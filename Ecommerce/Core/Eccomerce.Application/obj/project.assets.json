@@ -1046,9 +1046,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj",
-      "projectName": "Ecomerce.Application",
-      "projectPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj",
+      "projectUniqueName": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecommerce.Application.csproj",
+      "projectName": "Ecommerce.Application",
+      "projectPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecommerce.Application.csproj",
       "packagesPath": "C:\\Users\\azimz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\obj\\",
       "projectStyle": "PackageReference",

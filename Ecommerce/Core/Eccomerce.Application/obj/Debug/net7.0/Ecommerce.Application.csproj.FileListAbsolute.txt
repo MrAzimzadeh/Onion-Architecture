@@ -1,0 +1,17 @@
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Application.deps.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Application.runtimeconfig.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Application.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Domain.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\bin\Debug\net7.0\Ecommerce.Domain.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.csproj.AssemblyReference.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.AssemblyInfoInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.AssemblyInfo.cs
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.csproj.CoreCompileInputs.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.csproj.CopyComplete
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\refint\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.genruntimeconfig.cache
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\ref\Ecommerce.Application.dll

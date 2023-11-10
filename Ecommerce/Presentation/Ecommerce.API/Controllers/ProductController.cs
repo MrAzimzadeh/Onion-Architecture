@@ -6,6 +6,7 @@ using Ecomerce.Application.Repositories.Products;
 using Ecomerce.Application.RequestParameters;
 using Ecomerce.Application.Services;
 using Ecomerce.Application.ViewModels.Products;
+using Ecomerce.Infrastructure.Services.Storage;
 using Ecommerce.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ public class ProductController : ControllerBase
     private readonly IFileProductImageWriteRepository _fileProductImageWriteRepository;
     private readonly IInvoiceFileReadRepository _invoiceFileReadRepository;
     private readonly IInvoiceFileWriteRepository _invoiceFileWriteRepository;
+    private readonly IStorageService _storageService;
 
     public ProductController
     (

@@ -572,7 +572,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "Ecomerce.Application/1.0.0": {
+      "Ecommerce.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -583,10 +583,10 @@
           "Microsoft.EntityFrameworkCore": "7.0.13"
         },
         "compile": {
-          "bin/placeholder/Ecomerce.Application.dll": {}
+          "bin/placeholder/Ecommerce.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Ecomerce.Application.dll": {}
+          "bin/placeholder/Ecommerce.Application.dll": {}
         }
       },
       "Ecommerce.Domain/1.0.0": {
@@ -1440,10 +1440,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Ecomerce.Application/1.0.0": {
+    "Ecommerce.Application/1.0.0": {
       "type": "project",
-      "path": "../../Core/Eccomerce.Application/Ecomerce.Application.csproj",
-      "msbuildProject": "../../Core/Eccomerce.Application/Ecomerce.Application.csproj"
+      "path": "../../Core/Eccomerce.Application/Ecommerce.Application.csproj",
+      "msbuildProject": "../../Core/Eccomerce.Application/Ecommerce.Application.csproj"
     },
     "Ecommerce.Domain/1.0.0": {
       "type": "project",
@@ -1453,7 +1453,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Ecomerce.Application >= 1.0.0",
+      "Ecommerce.Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
@@ -1496,8 +1496,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj": {
-              "projectPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj"
+            "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecommerce.Application.csproj": {
+              "projectPath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecommerce.Application.csproj"
             }
           }
         }

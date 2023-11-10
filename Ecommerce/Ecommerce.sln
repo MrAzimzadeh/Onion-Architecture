@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{987C920F-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Domain", "Core\Ecommerce.Domain\Ecommerce.Domain.csproj", "{99A2926C-FD9E-4769-9334-350921B88B5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecomerce.Application", "Core\Eccomerce.Application\Ecomerce.Application.csproj", "{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Application", "Core\Eccomerce.Application\Ecommerce.Application.csproj", "{FFF25018-6DDD-43D9-A60E-F6C825C7E6CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{643E69E6-ED99-4046-9A31-028B914E2FF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eccomerce.Infrastructure", "Infrastructure\Eccomerce.Infrastructure\Eccomerce.Infrastructure.csproj", "{E875E859-BDF3-41A6-B97A-0687B05EB34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Infrastructure", "Infrastructure\Ecommerce.Infrastructure\Ecommerce.Infrastructure.csproj", "{E875E859-BDF3-41A6-B97A-0687B05EB34C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Persistence", "Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj", "{D4BA1016-83DC-4165-BA7E-3B68C375AF05}"
 EndProject
