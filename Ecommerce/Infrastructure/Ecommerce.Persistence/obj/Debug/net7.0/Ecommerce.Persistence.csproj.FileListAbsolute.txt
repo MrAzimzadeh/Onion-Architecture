@@ -15,5 +15,5 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecom
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.csproj.CopyComplete
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Persistence.runtimeconfig.json
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.genruntimeconfig.cache
-C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecomerce.Application.dll
-C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecomerce.Application.pdb
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\bin\Debug\net7.0\Ecommerce.Application.pdb

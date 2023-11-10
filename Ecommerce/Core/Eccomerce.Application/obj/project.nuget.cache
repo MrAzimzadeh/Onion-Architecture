@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZBwb9IN+ilSkq1gSd+ge5+3PRY+Az9FQjWgLc8Z69gOk5oleLykwyynVi58BhGY/0JQRxfnNuHBxByE4dJS1Dw==",
+  "dgSpecHash": "orHPM0YwtqE594Rt3ZlwRL8hd4YIpOk5UKjI7f09TKOz4M1sgZPBaY+uyc4h1W/3bZteUzFMHwdndx6TVY8YvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecomerce.Application.csproj",
+  "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Core\\Eccomerce.Application\\Ecommerce.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

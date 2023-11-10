@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Ecomerce.Infrastructure</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Eccomerce.Application\Ecommerce.Application.csproj" />
+  <ItemGroup>
+    <Folder Include="Services\Storage\AWS\" />
+    <Folder Include="Services\Storage\Azure\" />
+  </ItemGroup>
+
+
+
+
+  </ItemGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Project>

@@ -1,6 +1,6 @@
 ﻿namespace Ecomerce.Application.Abstractions.Storeg.Local;
 
-public interface ILocalStorege
+public interface ILocalStorege : IStorage
 {
     
 }

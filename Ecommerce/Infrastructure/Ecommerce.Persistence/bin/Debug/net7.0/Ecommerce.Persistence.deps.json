@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Ecommerce.Persistence/1.0.0": {
         "dependencies": {
-          "Ecomerce.Application": "1.0.0",
+          "Ecommerce.Application": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.13",
@@ -256,7 +256,7 @@
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "Ecomerce.Application/1.0.0": {
+      "Ecommerce.Application/1.0.0": {
         "dependencies": {
           "Ecommerce.Domain": "1.0.0",
           "FluentValidation": "11.8.0",
@@ -265,7 +265,7 @@
           "Microsoft.EntityFrameworkCore": "7.0.13"
         },
         "runtime": {
-          "Ecomerce.Application.dll": {}
+          "Ecommerce.Application.dll": {}
         }
       },
       "Ecommerce.Domain/1.0.0": {
@@ -505,7 +505,7 @@
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
-    "Ecomerce.Application/1.0.0": {
+    "Ecommerce.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

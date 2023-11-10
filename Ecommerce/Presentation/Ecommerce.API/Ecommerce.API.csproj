@@ -17,14 +17,13 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\Eccomerce.Infrastructure\Eccomerce.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Ecommerce.Infrastructure\Ecommerce.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj" />
   </ItemGroup>
 
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="wwwroot\resurce\" />
   </ItemGroup>
 
 </Project>
