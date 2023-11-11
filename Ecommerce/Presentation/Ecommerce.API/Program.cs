@@ -13,7 +13,7 @@ builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureService();
 
 
-builder.Services.AddStorage<LocalStorage>();
+builder.Services.AddStorage<AzureStorage>();
 
 
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())

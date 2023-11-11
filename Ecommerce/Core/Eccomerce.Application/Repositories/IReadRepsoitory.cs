@@ -38,7 +38,7 @@ public interface IReadRepsoitory<T> : IRepository<T>
 
     #endregion
 
-    #region AsyncTracking
+    #region AsyncTracking   
 
     Task<IQueryable<T>> GetAllAsync(bool tracking = true);
     Task<IQueryable<T>> GetWhereAsync(Expression<Func<T, bool>> method, bool tracking = true);

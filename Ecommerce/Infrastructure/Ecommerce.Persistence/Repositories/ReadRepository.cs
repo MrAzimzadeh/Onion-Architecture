@@ -94,7 +94,7 @@ public class ReadRepository<T> : IReadRepsoitory<T>
     public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method, bool tracking = true)
     {
         var query = Table.AsQueryable();
-        if (!tracking)
+        if (!tracking)  
             query = query.AsNoTracking();
         return await query.FirstOrDefaultAsync(method);
     }

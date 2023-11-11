@@ -39,7 +39,7 @@ public class ProductController : ControllerBase
         IProductImageFileReadRepository productImageFileReadRepository,
         IFileProductImageWriteRepository fileProductImageWriteRepository,
         IInvoiceFileReadRepository invoiceFileReadRepository,
-        IInvoiceFileWriteRepository invoiceFileWriteRepository, 
+        IInvoiceFileWriteRepository invoiceFileWriteRepository,
         IStorageService storageService)
     {
         _productWriteRepository = productWriteRepository;
@@ -130,16 +130,40 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost("[action]")]
-    public async Task<IActionResult> Upload()
+    public async Task<IActionResult> Upload(string id)
     {
-        var data = await _storageService.UploadRangeAsync("productimages", Request.Form.Files);
-        await _fileWriteRepository.AddRangeAsync(data.Select(z => new Ecommerce.Domain.Entities.File()
+        var data = await _storageService.UploadRangeAsync("photo-image", Request.Form.Files);
+
+        Product product = await _productReadRepository.GetByIdAsync(id, tracking: true);
+
+        foreach (var r in data)
         {
-            FileName = z.fileName,
-            Path = z.pathOrContainer,
-            Storage = _storageService.StorageName
-        }).ToList());
-        await _fileWriteRepository.SaveChangesAsync();
+            ProductImageFile p = new();
+            p.Products = new List<Product>() {product};
+            p.FileName = r.fileName;
+            p.Path = r.pathOrContainer;
+            p.Storage = _storageService.StorageName;
+            product.ProductImageFiles.Add(p);
+            // product.ProductImageFiles.Add(new()
+            // {
+            //     FileName = r.fileName,
+            //     Path = r.pathOrContainer,
+            //     Storage = _storageService.StorageName,
+            //     Products = new List<Product> { product }
+            //     
+            // });
+        }
+
+
+        // await _fileProductImageWriteRepository.AddRangeAsync(data.Select(z =>
+        //     new Ecommerce.Domain.Entities.ProductImageFile()
+        //     {
+        //         FileName = z.fileName,
+        //         Path = z.pathOrContainer,   
+        //         Storage = _storageService.StorageName,
+        //         Products = new List<Product> { product }
+        //     }).ToList());
+        await _productWriteRepository.SaveChangesAsync();
         return Ok();
     }
 

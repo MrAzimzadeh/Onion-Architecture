@@ -30,6 +30,7 @@ public class AzureStorage : Storage, IAzureStorage
         foreach (IFormFile file in files)
         {
             string fileNewName = await FileRenameAsync(containerName, file.FileName, HasFile);
+            // string error = await FileRenameAsync(containerName, file.Name, HasFile);
 
             BlobClient blobClient = _blobContainerClient.GetBlobClient(fileNewName);
             await blobClient.UploadAsync(file.OpenReadStream()); // Faylı yüklə
