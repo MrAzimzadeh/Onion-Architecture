@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Ecomerce.Infrastructure.Services.Storage.Azure;
 
-public class AzureStorage : IAzureStorage
+public class AzureStorage : Storage, IAzureStorage
 
 {
     readonly BlobServiceClient _blobServiceClient; // Qosulmaq ucun istifade olunur
@@ -21,27 +21,23 @@ public class AzureStorage : IAzureStorage
     public async Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string containerName,
         IFormFileCollection files)
     {
-        _blobContainerClient =
-            _blobServiceClient
-                .GetBlobContainerClient(
-                    containerName); // Containeri aliriq yeni hansi container uzerinde isleyecekse onu aliriq 
+        _blobContainerClient = _blobServiceClient.GetBlobContainerClient(containerName);
+        await _blobContainerClient.CreateIfNotExistsAsync();
+        await _blobContainerClient.SetAccessPolicyAsync(PublicAccessType.BlobContainer);
 
-        await _blobContainerClient.CreateIfNotExistsAsync(); // Eger bele bir container yoxdursa yaradir
-
-        await _blobContainerClient.SetAccessPolicyAsync(PublicAccessType
-            .BlobContainer); //  icindeki butun fayllari oxuna bilir edir 
-
-        List<(string fileName, string pathOrContainer)> datas = new(); // List 
-
+        List<(string fileName, string pathOrContainerName)> datas = new();
         foreach (IFormFile file in files)
         {
-            BlobClient blobClient = _blobContainerClient.GetBlobClient(file.Name); // faylin adini aliriq
-            await blobClient.UploadAsync(file.OpenReadStream()); // fayli yukleyirik
-            datas.Add((file.Name, containerName));
+            string fileNewName = await FileRenameAsync(containerName, file.FileName, HasFile);
+
+            BlobClient blobClient = _blobContainerClient.GetBlobClient(fileNewName);
+            await blobClient.UploadAsync(file.OpenReadStream());
+            datas.Add((fileNewName, $"{containerName}/{fileNewName}"));
         }
 
         return datas;
     }
+
 
     public async Task DeleteAsync(string container, string fileName)
     {
