@@ -132,17 +132,7 @@ public class ProductController : ControllerBase
     [HttpPost("[action]")]
     public async Task<IActionResult> Upload()
     {
-        // var datas = await _fileService.UploadRangeAsync("resurce\\ProductIMage", Request.Form.Files);
-        //
-        // await _fileWriteRepository.AddRangeAsync(datas.Select(z => new Ecommerce.Domain.Entities.File()
-        // {
-        //     FileName = z.fileName,
-        //     Path = z.path,
-        // }).ToList());
-        // await _fileProductImageWriteRepository.SaveChangesAsync();
-
-
-        var data = await _storageService.UploadRangeAsync("filemm", Request.Form.Files);
+        var data = await _storageService.UploadRangeAsync("productimages", Request.Form.Files);
         await _fileWriteRepository.AddRangeAsync(data.Select(z => new Ecommerce.Domain.Entities.File()
         {
             FileName = z.fileName,

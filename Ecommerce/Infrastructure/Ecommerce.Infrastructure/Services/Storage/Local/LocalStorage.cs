@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Ecommerce.Infrastructure.Services.Storage.Local;
 
-public class LocalStorage : ILocalStorege
+public class LocalStorage : Ecomerce.Infrastructure.Services.Storage.Storage, ILocalStorege
 {
     private readonly IWebHostEnvironment _webHostEnvironment;
 
@@ -29,10 +29,12 @@ public class LocalStorage : ILocalStorege
 
     private async Task<bool> CopyFileAsync(string path, IFormFile file)
     {
+        // Path - C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\wwwroot\productimages\
         try
         {
             // Generate a new sanitized file name
-            string newFileName = await GenerateNewFileNameAsync(Path.GetDirectoryName(path), file.FileName);
+            // newFileName - 3415007-2.jpg
+            string newFileName = await FileRenameAsync(Path.GetDirectoryName(path), file.FileName, HasFile);
 
             // Combine the path with the new file name
             string newPath = Path.Combine(Path.GetDirectoryName(path), newFileName);
@@ -51,27 +53,11 @@ public class LocalStorage : ILocalStorege
         }
     }
 
-    private async Task<string> GenerateNewFileNameAsync(string path, string fileName)
-    {
-        string extension = Path.GetExtension(fileName);
-        string nameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
-        string baseFileName = NameService.CharacterRegulatory(nameWithoutExtension);
-        string newFileName = $"{baseFileName}{extension}";
-
-        int index = 2;
-
-        while (File.Exists(Path.Combine(path, newFileName)))
-        {
-            newFileName = $"{baseFileName}-{index++}{extension}";
-        }
-
-        return newFileName;
-    }
-
 
     public async Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string pathOrContainer,
         IFormFileCollection files)
     {
+        //C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\wwwroot\{pathOrContainer} 
         string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, pathOrContainer);
         if (!Directory.Exists(uploadPath))
             Directory.CreateDirectory(uploadPath);

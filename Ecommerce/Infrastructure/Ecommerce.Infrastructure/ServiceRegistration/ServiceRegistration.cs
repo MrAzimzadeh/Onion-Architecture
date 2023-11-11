@@ -18,7 +18,7 @@ public static class ServiceRegistration
     }
 
     public static void AddStorage<T>(this IServiceCollection serviceCollection)
-        where T : class, IStorage
+        where T : Storage, IStorage
     {
         serviceCollection.AddScoped<IStorage, T>();
     }
