@@ -23,12 +23,42 @@
 
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Content Include="obj\project.packagespec.json" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Content Include="obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\3415007-2-3-4-5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\3415007-2-3-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\3415007-2-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\3415007-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\ButtonSplash-2-3-4-5.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\ButtonSplash-2-3-4.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\ButtonSplash-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\ButtonSplash-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Ellipse 1-2-3-4-5.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Ellipse 1-2-3-4.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Ellipse 1-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Ellipse 1-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Frame 4 (1)-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Frame 4 (1)-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\SearchIconGreen r-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\SearchIconGreen r-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Vector-2-3-4.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Vector-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\photo-image\Vector-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\3415007-2-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\3415007-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\ButtonSplash-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\ButtonSplash-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\Ellipse 1-2-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\Ellipse 1-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\productimages\Frame 4 (1)-2.svg" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

@@ -14,9 +14,11 @@ public class StorageService : IStorageService
         _storage = storage;
     }
 
-    public Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string pathOrContainer,
+    public Task<List<(string fileName, string pathOrContainerName)>> UploadAsync(string pathOrContainer,
         IFormFileCollection files)
-        => _storage.UploadRangeAsync(pathOrContainer: pathOrContainer, files: files);
+        => _storage.UploadAsync(pathOrContainer, files: files);
+
+   
 
     public async Task DeleteAsync(string pathOrContainer, string fileName)
         => await _storage.DeleteAsync(pathOrContainer, fileName);
@@ -32,5 +34,4 @@ public class StorageService : IStorageService
     {
         get => _storage.GetType().Name;
     }
-    
 }

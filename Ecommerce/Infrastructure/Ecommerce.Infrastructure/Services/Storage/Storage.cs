@@ -1,59 +1,64 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.IO;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Ecomerce.Infrastructure.StaticService;
 
 namespace Ecomerce.Infrastructure.Services.Storage
 {
-    public class Storage
+      public class Storage
     {
-        // Fayl adını dəyişdirmək üçün istifadə olunan metod
         protected delegate bool HasFile(string pathOrContainerName, string fileName);
-
-        // Fayl adını dəyişdirmək üçün istifadə olunan üsullar
         protected async Task<string> FileRenameAsync(string pathOrContainerName, string fileName, HasFile hasFileMethod, bool first = true)
         {
-            
-            // Path - C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\wwwroot\{pathOrContainerName}
-            // FileName - 3415007.jpg
-            // hasFileMethod - HasFile
-            string newFileName = await Task.Run(() =>
+            string newFileName = await Task.Run<string>(async () =>
             {
-                // Faylın uzantısını 
-                // extension - .jpg
                 string extension = Path.GetExtension(fileName);
-                // Faylın adını almaq
-                // baseFileName - (FileName)
-                string baseFileName = Path.GetFileNameWithoutExtension(fileName);
-
-                int fileNo = 2;
-
-                if (!first)
+                string newFileName = string.Empty;
+                if (first)
                 {
-                    // Fayl adındakı rəqəmi çıxartmaq üçün 
-                    Match match = Regex.Match(baseFileName, @"-(\d+)$");
-
-                    // match.Groups[1].Value = 2
-                    // parsedFileNo = 2
-                    if (match.Success && int.TryParse(match.Groups[1].Value, out int parsedFileNo))
+                    string oldName = Path.GetFileNameWithoutExtension(fileName);
+                    newFileName = $"{NameService.CharacterRegulatory(oldName)}{extension}";
+                }
+                else
+                {
+                    newFileName = fileName;
+                    int indexNo1 = newFileName.IndexOf("-");
+                    if (indexNo1 == -1)
+                        newFileName = $"{Path.GetFileNameWithoutExtension(newFileName)}-2{extension}";
+                    else
                     {
-                        fileNo = parsedFileNo + 1;
+                        int lastIndex = 0;
+                        while (true)
+                        {
+                            lastIndex = indexNo1;
+                            indexNo1 = newFileName.IndexOf("-", indexNo1 + 1);
+                            if (indexNo1 == -1)
+                            {
+                                indexNo1 = lastIndex;
+                                break;
+                            }
+                        }
+
+                        int indexNo2 = newFileName.IndexOf(".");
+                        string fileNo = newFileName.Substring(indexNo1 + 1, indexNo2 - indexNo1 - 1);
+
+                        if (int.TryParse(fileNo, out int _fileNo))
+                        {
+                            _fileNo++;
+                            newFileName = newFileName.Remove(indexNo1 + 1, indexNo2 - indexNo1 - 1)
+                                                .Insert(indexNo1 + 1, _fileNo.ToString());
+                        }
+                        else
+                            newFileName = $"{Path.GetFileNameWithoutExtension(newFileName)}-2{extension}";
+
                     }
                 }
 
-                // Yeni fayl  
-                // newFileNameWithoutExtension - 3415007-2
-                string newFileNameWithoutExtension = $"{baseFileName}-{fileNo}";
-                // newFileNameWithExtension - 3415007-2.jpg
-                string newFileNameWithExtension = $"{newFileNameWithoutExtension}{extension}";
-
-                // Əgər yeni fayl adı artıq mövcuddursa adı yenidən təyin etmə prosesini təkrarla (Recursive fun    ction)
-                if (hasFileMethod(pathOrContainerName, newFileNameWithExtension))
-                {
-                    // pathOrContainerName - C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\wwwroot\{pathOrContainerName}
-                    // newFileNameWithExtension - 3415007-2.jpg  
-                    // hasFileMethod - HasFile
-                    return FileRenameAsync(pathOrContainerName, newFileNameWithExtension, hasFileMethod, false).Result;
-                }
-
-                return newFileNameWithExtension;
+                //if (File.Exists($"{pathOrContainerName}\\{newFileName}"))
+                if (hasFileMethod(pathOrContainerName, newFileName))
+                    return await FileRenameAsync(pathOrContainerName, newFileName, hasFileMethod, false);
+                else
+                    return newFileName;
             });
 
             return newFileName;

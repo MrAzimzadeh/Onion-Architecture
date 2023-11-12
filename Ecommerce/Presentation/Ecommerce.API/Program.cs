@@ -2,7 +2,7 @@ using Ecomerce.Application.Validators.Products;
 using Ecomerce.Infrastructure.Filters;
 using Ecomerce.Infrastructure.ServiceRegistration;
 using Ecomerce.Infrastructure.Services.Storage.Azure;
-using Ecommerce.Infrastructure.Services.Storage.Local;
+using Ecomerce.Infrastructure.Services.Storage.Local;
 using Ecommerce.Persistence.ServiceRegistrations;
 using FluentValidation.AspNetCore;
 using FluentValidation.Results;

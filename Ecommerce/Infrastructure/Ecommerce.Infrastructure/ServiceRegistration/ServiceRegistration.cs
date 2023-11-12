@@ -3,8 +3,8 @@ using Ecomerce.Infrastructure.Enums;
 using Ecomerce.Infrastructure.Services;
 using Ecomerce.Infrastructure.Services.Storage;
 using Ecomerce.Infrastructure.Services.Storage.Azure;
+using Ecomerce.Infrastructure.Services.Storage.Local;
 using Ecommerce.Application.Abstractions.Storeg;
-using Ecommerce.Infrastructure.Services.Storage.Local;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecomerce.Infrastructure.ServiceRegistration;

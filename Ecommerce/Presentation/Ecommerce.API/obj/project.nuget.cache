@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "G1i8Cef/Xt2d11446aSVMAKQDf5icNVmrgfEitg6rZfZ1OQJqX8F7iuHs7vf+CvH2dGdmOMG5SwifRQDk/D19w==",
+  "dgSpecHash": "frNNXbL/6PBHuDzKDWeY7toMV4xOchtO6aW5VfTzIooWPzNu3lcOmrgistnLFU93ahkf8Y0D2Fwff8BLOjmsog==",
   "success": true,
   "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\Ecommerce.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\azimz\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\azure.storage.blobs\\12.19.0\\azure.storage.blobs.12.19.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\azure.storage.common\\12.18.0\\azure.storage.common.12.18.0.nupkg.sha512",
@@ -11,6 +12,9 @@
     "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\mediatr.extensions.autofac.dependencyinjection\\11.2.0\\mediatr.extensions.autofac.dependencyinjection.11.2.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

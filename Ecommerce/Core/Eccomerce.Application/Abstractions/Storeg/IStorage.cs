@@ -4,10 +4,8 @@ namespace Ecommerce.Application.Abstractions.Storeg;
 
 public interface IStorage
 {
-    Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string pathOrContainer,
-        IFormFileCollection files);
-
-    Task DeleteAsync(string pathOrContainer, string fileName);
-    List<string> GetFiles(string pathOrContainer);
-    bool HasFile(string pathOrContainer, string fileName);
+    Task<List<(string fileName, string pathOrContainerName)>> UploadAsync(string pathOrContainerName, IFormFileCollection files);
+    Task DeleteAsync(string pathOrContainerName, string fileName);
+    List<string> GetFiles(string pathOrContainerName);
+    bool HasFile(string pathOrContainerName, string fileName);
 }

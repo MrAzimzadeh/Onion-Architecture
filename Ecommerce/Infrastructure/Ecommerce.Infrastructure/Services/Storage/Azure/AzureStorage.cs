@@ -18,8 +18,11 @@ public class AzureStorage : Storage, IAzureStorage
     }
 
     // Bir çox faylları yükləmək üçün istifadə olunan metot
-    public async Task<List<(string fileName, string pathOrContainer)>> UploadRangeAsync(string containerName,
-        IFormFileCollection files)
+
+    // Faylı silmək üçün istifadə olunan metot
+
+
+    public async Task<List<(string fileName, string pathOrContainerName)>> UploadAsync(string containerName, IFormFileCollection files)
     {
         _blobContainerClient = _blobServiceClient.GetBlobContainerClient(containerName);
         await _blobContainerClient.CreateIfNotExistsAsync(); // Eğer konteyner yoxdursa yarat 
@@ -40,7 +43,6 @@ public class AzureStorage : Storage, IAzureStorage
         return datas;
     }
 
-    // Faylı silmək üçün istifadə olunan metot
     public async Task DeleteAsync(string container, string fileName)
     {
         _blobContainerClient = _blobServiceClient.GetBlobContainerClient(container);
