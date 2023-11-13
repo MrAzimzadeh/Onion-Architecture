@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using Ecomerce.Application.Features.Commands;
+using Ecomerce.Application.Features.Queries.GetAllProduct;
 using Ecomerce.Application.Repositories.File;
 using Ecomerce.Application.Repositories.InvoiceFile;
 using Ecomerce.Application.Repositories.ProductImageFile;
@@ -9,6 +11,7 @@ using Ecomerce.Application.Services;
 using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Application.Abstractions.Storeg;
 using Ecommerce.Domain.Entities;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.API.Controllers;
@@ -30,6 +33,7 @@ public class ProductController : ControllerBase
     private readonly IInvoiceFileWriteRepository _invoiceFileWriteRepository;
     private readonly IStorageService _storageService;
     private readonly IConfiguration _configuration;
+    private readonly IMediator _mediator;
 
     public ProductController
     (
@@ -42,7 +46,7 @@ public class ProductController : ControllerBase
         IFileProductImageWriteRepository fileProductImageWriteRepository,
         IInvoiceFileReadRepository invoiceFileReadRepository,
         IInvoiceFileWriteRepository invoiceFileWriteRepository,
-        IStorageService storageService, IConfiguration configuration)
+        IStorageService storageService, IConfiguration configuration, IMediator mediator)
     {
         _productWriteRepository = productWriteRepository;
         _productReadRepository = productReadRepository;
@@ -56,32 +60,15 @@ public class ProductController : ControllerBase
         _invoiceFileWriteRepository = invoiceFileWriteRepository;
         _storageService = storageService;
         _configuration = configuration;
+        _mediator = mediator;
     }
 
 
-    [HttpGet]
-    public IActionResult Get([FromQuery] Pagination pagination)
+    [HttpGet("GetAlls")]
+    public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
     {
-        var totalCount = _productReadRepository.GetAll(tracking: false).Count();
-
-        var products = _productReadRepository.GetAll(tracking: false)
-            .Skip(pagination.Page * pagination.Size)
-            .Take(pagination.Size)
-            .Select(z => new
-            {
-                z.Name,
-                z.CreatedDate,
-                z.UpdateDate,
-                z.Price,
-                z.Id,
-                z.Stock
-            });
-
-        return Ok(new
-        {
-            totalCount,
-            products
-        });
+        GetAllProductQueryResponse response = await _mediator.Send(getAllProductQueryRequest);
+        return Ok(response);
     }
 
     [HttpGet("{id}")]
@@ -92,15 +79,10 @@ public class ProductController : ControllerBase
 
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] VM_Create_Product createProduct)
+    public async Task<IActionResult> Post([FromBody] CreateProductCommandRequest createProductCommandRequest)
     {
-        await _productWriteRepository.AddAsync(new()
-        {
-            Name = createProduct.Name,
-            Price = createProduct.Price,
-            Stock = createProduct.Stock
-        });
-        await _productWriteRepository.SaveChangesAsync();
+        CreateProductCommandResponse response = await _mediator.Send(createProductCommandRequest);
+
         return StatusCode((int)HttpStatusCode.Created);
     }
 
@@ -120,7 +102,7 @@ public class ProductController : ControllerBase
         return Ok();
     }
 
-    [HttpDelete]
+    [HttpDelete("deleteproduct/{id}")]
     public IActionResult Delete(string id)
     {
         var a = _productWriteRepository.Remove(id);
@@ -183,6 +165,7 @@ public class ProductController : ControllerBase
             }));
     }
 
+    [HttpGet("GetImage/{productId}/{imageId}")]
     public async Task<IActionResult> DeleteProductImage(string productId, string imageId)
     {
         Product? product = await _productReadRepository.Table

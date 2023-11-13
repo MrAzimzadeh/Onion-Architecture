@@ -1,3 +1,4 @@
+using Ecomerce.Application.ServiceRegistrations;
 using Ecomerce.Application.Validators.Products;
 using Ecomerce.Infrastructure.Filters;
 using Ecomerce.Infrastructure.ServiceRegistration;
@@ -11,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureService();
-
+builder.Services.AddApplicationService();
 
 builder.Services.AddStorage<AzureStorage>();
 

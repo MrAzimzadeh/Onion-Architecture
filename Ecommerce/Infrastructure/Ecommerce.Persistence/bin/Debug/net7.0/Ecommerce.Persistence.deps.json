@@ -21,6 +21,17 @@
           "Ecommerce.Persistence.dll": {}
         }
       },
+      "Autofac/7.1.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "runtime": {
+          "lib/net7.0/Autofac.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
       "FluentValidation/11.8.0": {
         "runtime": {
           "lib/net7.0/FluentValidation.dll": {
@@ -58,6 +69,38 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "MediatR/12.1.1": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/MediatR.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.1.1.0"
+          }
+        }
+      },
+      "MediatR.Contracts/2.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "MediatR.Extensions.Autofac.DependencyInjection/11.2.0": {
+        "dependencies": {
+          "Autofac": "7.1.0",
+          "MediatR": "12.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
+            "assemblyVersion": "11.2.0.0",
+            "fileVersion": "11.2.0.0"
           }
         }
       },
@@ -250,6 +293,7 @@
           }
         }
       },
+      "System.Diagnostics.DiagnosticSource/4.7.1": {},
       "System.Text.Encodings.Web/7.0.0": {},
       "System.Text.Json/7.0.0": {
         "dependencies": {
@@ -262,6 +306,8 @@
           "FluentValidation": "11.8.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "FluentValidation.DependencyInjectionExtensions": "11.8.0",
+          "MediatR": "12.1.1",
+          "MediatR.Extensions.Autofac.DependencyInjection": "11.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.13"
         },
         "runtime": {
@@ -280,6 +326,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XCXmpxhOnuztTTRkzG+8B8KU8SR8WjBYwSntndjlsFR5lM3K/g43r9hUwewIPDBJwDrmZU3TjmNdH6s8IF3VFQ==",
+      "path": "autofac/7.1.0",
+      "hashPath": "autofac.7.1.0.nupkg.sha512"
     },
     "FluentValidation/11.8.0": {
       "type": "package",
@@ -308,6 +361,27 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "MediatR/12.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1AbwzzeS6gn4NdcO6A9LfKS5TXXgAiUQM3J18dREHa7O7TrdCXJ5dNFeRBpzPZY7UWl5Kby+n9pWrPJe3SDiMA==",
+      "path": "mediatr/12.1.1",
+      "hashPath": "mediatr.12.1.1.nupkg.sha512"
+    },
+    "MediatR.Contracts/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "path": "mediatr.contracts/2.0.1",
+      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
+    },
+    "MediatR.Extensions.Autofac.DependencyInjection/11.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r3DsIUWqVIUnm0nDZFWiNml3x9E04aVOZIYrQDl4P60ivovwD02h28Buef0cw9lSej+Q30no1hWTZvGhpib3HA==",
+      "path": "mediatr.extensions.autofac.dependencyinjection/11.2.0",
+      "hashPath": "mediatr.extensions.autofac.dependencyinjection.11.2.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/7.0.13": {
       "type": "package",
@@ -490,6 +564,13 @@
       "sha512": "sha512-2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
       "path": "system.codedom/4.4.0",
       "hashPath": "system.codedom.4.4.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
+      "path": "system.diagnostics.diagnosticsource/4.7.1",
+      "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
     },
     "System.Text.Encodings.Web/7.0.0": {
       "type": "package",
