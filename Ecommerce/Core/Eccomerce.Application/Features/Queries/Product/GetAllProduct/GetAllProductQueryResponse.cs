@@ -1,4 +1,4 @@
-﻿namespace Ecomerce.Application.Features.Queries.GetAllProduct;
+﻿namespace Ecomerce.Application.Features.Queries.Product.GetAllProduct;
 
 public class GetAllProductQueryResponse
 {

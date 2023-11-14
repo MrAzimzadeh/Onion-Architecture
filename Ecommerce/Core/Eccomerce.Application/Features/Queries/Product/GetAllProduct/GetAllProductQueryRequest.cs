@@ -1,7 +1,6 @@
-﻿using Ecomerce.Application.RequestParameters;
-using MediatR;
+﻿using MediatR;
 
-namespace Ecomerce.Application.Features.Queries.GetAllProduct;
+namespace Ecomerce.Application.Features.Queries.Product.GetAllProduct;
 
 public class GetAllProductQueryRequest : IRequest<GetAllProductQueryResponse>
 {

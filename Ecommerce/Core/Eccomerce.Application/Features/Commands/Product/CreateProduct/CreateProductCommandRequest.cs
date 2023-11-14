@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Ecomerce.Application.Features.Commands;
+namespace Ecomerce.Application.Features.Commands.Product.CreateProduct;
 
 public class CreateProductCommandRequest : IRequest<CreateProductCommandResponse>
 {

@@ -1,7 +1,7 @@
 ﻿using Ecomerce.Application.Repositories.Products;
 using MediatR;
 
-namespace Ecomerce.Application.Features.Queries.GetAllProduct;
+namespace Ecomerce.Application.Features.Queries.Product.GetAllProduct;
 
 public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, GetAllProductQueryResponse>
 {

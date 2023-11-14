@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using Ecomerce.Application.Features.Commands;
-using Ecomerce.Application.Features.Queries.GetAllProduct;
+using Ecomerce.Application.Features.Commands.Product.CreateProduct;
+using Ecomerce.Application.Features.Queries.Product.GetAllProduct;
 using Ecomerce.Application.Repositories.File;
 using Ecomerce.Application.Repositories.InvoiceFile;
 using Ecomerce.Application.Repositories.ProductImageFile;

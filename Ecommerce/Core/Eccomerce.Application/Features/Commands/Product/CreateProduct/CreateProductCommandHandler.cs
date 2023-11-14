@@ -1,7 +1,7 @@
 ﻿using Ecomerce.Application.Repositories.Products;
 using MediatR;
 
-namespace Ecomerce.Application.Features.Commands;
+namespace Ecomerce.Application.Features.Commands.Product.CreateProduct;
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest, CreateProductCommandResponse>
 {
