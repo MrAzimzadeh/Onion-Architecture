@@ -2,7 +2,12 @@
 using System.Net;
 using Ecomerce.Application.Features.Commands;
 using Ecomerce.Application.Features.Commands.Product.CreateProduct;
+using Ecomerce.Application.Features.Commands.Product.RemoveProduct;
+using Ecomerce.Application.Features.Commands.Product.UpdateProduct;
+using Ecomerce.Application.Features.Commands.ProductImageFile.RemoveProductImage;
+using Ecomerce.Application.Features.Commands.ProductImageFile.UploadProductImage;
 using Ecomerce.Application.Features.Queries.Product.GetAllProduct;
+using Ecomerce.Application.Features.Queries.Product.GetByIdProduct;
 using Ecomerce.Application.Repositories.File;
 using Ecomerce.Application.Repositories.InvoiceFile;
 using Ecomerce.Application.Repositories.ProductImageFile;
@@ -72,10 +77,11 @@ public class ProductController : ControllerBase
         return Ok(response);
     }
 
-    [HttpGet("{id}")]
-    public IActionResult Get(string id)
+    [HttpGet("{Id}")]
+    public async Task<IActionResult> Get([FromRoute] GetByIdProductQueryRequest getByIdProductQueryRequest)
     {
-        return Ok(_productReadRepository.GetById(id, false));
+        GetByIdProductQueryResponse response = await _mediator.Send(getByIdProductQueryRequest);
+        return Ok(response);
     }
 
 
@@ -88,49 +94,25 @@ public class ProductController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> Put(VM_Update_Product model)
+    public async Task<IActionResult> Put([FromBody] UpdateProductCommandRequest request)
     {
-        if (ModelState.IsValid)
-        {
-            Console.WriteLine();
-        }
-
-        Product product = await _productReadRepository.GetByIdAsync(model.Id, tracking: true);
-        product.Stock = model.Stock;
-        product.Price = model.Price;
-        product.Name = model.Name;
-        await _productWriteRepository.SaveChangesAsync();
-        return Ok();
+        UpdateProductCommandResponse response = await _mediator.Send(request);
+        return Ok(response);
     }
 
-    [HttpDelete("deleteproduct/{id}")]
-    public IActionResult Delete(string id)
+
+    [HttpDelete("deleteProduct/{Id}")]
+    public async Task<IActionResult> Delete([FromRoute] RemoveProductCommandRequest request)
     {
-        var a = _productWriteRepository.Remove(id);
-        var v = _productWriteRepository.SaveChanges();
-        return Ok(new
-        {
-            // No Best Practice
-            message = "Delete Success"
-        });
+        RemoveProductCommandResponse response = await _mediator.Send(request);
+        return Ok(response);
     }
 
     [HttpPost("[action]")]
-    public async Task<IActionResult> Upload(string id)
+    public async Task<IActionResult> Upload(
+        [FromQuery] UploadProductImageCommandRequest uploadProductImageCommandRequest)
     {
-        var data = await _storageService.UploadAsync("photoimages", Request.Form.Files);
-
-        Product product = await _productReadRepository.GetByIdAsync(id);
-
-        await _fileProductImageWriteRepository.AddRangeAsync(data.Select(z =>
-            new Ecommerce.Domain.Entities.ProductImageFile()
-            {
-                FileName = z.fileName,
-                Path = z.pathOrContainerName,
-                Storage = _storageService.StorageName,
-                Products = new List<Product> { product }
-            }).ToList());
-        await _fileProductImageWriteRepository.SaveChangesAsync();
+        UploadProductImageCommandResponse response = await _mediator.Send(uploadProductImageCommandRequest);
         return Ok();
     }
 
@@ -166,17 +148,11 @@ public class ProductController : ControllerBase
             }));
     }
 
-    [HttpGet("GetImage/{productId}/{imageId}")]
-    public async Task<IActionResult> DeleteProductImage(string productId, string imageId)
+    [HttpDelete("GetImage/{ProductId}")]
+    public async Task<IActionResult> DeleteProductImage([FromRoute] RemoveProductImageCommandRequest request)
     {
-        Product? product = await _productReadRepository.Table
-            .Include(z => z.ProductImageFiles)
-            .FirstOrDefaultAsync(x => x.Id == Guid.Parse(productId));
-
-        product.ProductImageFiles
-            .Remove
-                (product.ProductImageFiles.FirstOrDefault(x => x.Id == Guid.Parse(imageId)));
-        await _productWriteRepository.SaveChangesAsync();
-        return Ok();
+        // request.ImageId = imageId;
+        RemoveProductImageCommandResponse response = await _mediator.Send(request);
+        return Ok(response);
     }
 }
