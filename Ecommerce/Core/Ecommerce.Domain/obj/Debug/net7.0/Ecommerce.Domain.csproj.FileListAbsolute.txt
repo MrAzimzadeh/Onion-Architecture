@@ -10,3 +10,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Doma
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\ref\Ecommerce.Domain.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.sourcelink.json
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.csproj.AssemblyReference.cache

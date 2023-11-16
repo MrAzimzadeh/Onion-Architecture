@@ -6,6 +6,7 @@ using Ecomerce.Application.Repositories.Orders;
 using Ecomerce.Application.Repositories.ProductImageFile;
 using Ecomerce.Application.Repositories.Products;
 using Ecommerce.Domain.Entities;
+using Ecommerce.Domain.Entities.Identity;
 using Ecommerce.Persistence.Contexts;
 using Ecommerce.Persistence.Repositories;
 using Ecommerce.Persistence.Repositories.File;
@@ -23,6 +24,9 @@ public static class ServiceRegistration
         // context 
         services.AddDbContext<EcommerceAPIDbContext>(options =>
             options.UseNpgsql(Configuration.ConnectionString));
+        
+        services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<EcommerceAPIDbContext>();
+
         services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
         services.AddScoped<ICustomerWriteReposiyory, CustomerWriteRepository>();
 
