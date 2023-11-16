@@ -15,3 +15,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecom
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\refint\Ecommerce.Infrastructure.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\ref\Ecommerce.Infrastructure.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\obj\Debug\net7.0\Ecommerce.Infrastructure.sourcelink.json

@@ -8,6 +8,7 @@ using Ecomerce.Application.Features.Commands.ProductImageFile.RemoveProductImage
 using Ecomerce.Application.Features.Commands.ProductImageFile.UploadProductImage;
 using Ecomerce.Application.Features.Queries.Product.GetAllProduct;
 using Ecomerce.Application.Features.Queries.Product.GetByIdProduct;
+using Ecomerce.Application.Features.Queries.ProductImageFile.GetProductImages;
 using Ecomerce.Application.Repositories.File;
 using Ecomerce.Application.Repositories.InvoiceFile;
 using Ecomerce.Application.Repositories.ProductImageFile;
@@ -26,46 +27,12 @@ namespace Ecommerce.API.Controllers;
 [ApiController]
 public class ProductController : ControllerBase
 {
-    //ctor injection hell 
-    private readonly IProductWriteRepository _productWriteRepository;
-    private readonly IProductReadRepository _productReadRepository;
-    private readonly IWebHostEnvironment _hostEnvironment;
-    private readonly IFileService _fileService;
-    private readonly IFileReadRepository _fileReadRepository;
-    private readonly IFileWriteRepository _fileWriteRepository;
-    private readonly IProductImageFileReadRepository _productImageFileReadRepository;
-    private readonly IFileProductImageWriteRepository _fileProductImageWriteRepository;
-    private readonly IInvoiceFileReadRepository _invoiceFileReadRepository;
-    private readonly IInvoiceFileWriteRepository _invoiceFileWriteRepository;
-    private readonly IStorageService _storageService;
-    private readonly IConfiguration _configuration;
     private readonly IMediator _mediator;
 
     public ProductController
     (
-        IProductWriteRepository productWriteRepository,
-        IProductReadRepository productReadRepository,
-        IWebHostEnvironment hostEnvironment,
-        IFileService fileService, IFileReadRepository fileReadRepository,
-        IFileWriteRepository fileWriteRepository,
-        IProductImageFileReadRepository productImageFileReadRepository,
-        IFileProductImageWriteRepository fileProductImageWriteRepository,
-        IInvoiceFileReadRepository invoiceFileReadRepository,
-        IInvoiceFileWriteRepository invoiceFileWriteRepository,
-        IStorageService storageService, IConfiguration configuration, IMediator mediator)
+        IMediator mediator)
     {
-        _productWriteRepository = productWriteRepository;
-        _productReadRepository = productReadRepository;
-        _hostEnvironment = hostEnvironment;
-        _fileService = fileService;
-        _fileReadRepository = fileReadRepository;
-        _fileWriteRepository = fileWriteRepository;
-        _productImageFileReadRepository = productImageFileReadRepository;
-        _fileProductImageWriteRepository = fileProductImageWriteRepository;
-        _invoiceFileReadRepository = invoiceFileReadRepository;
-        _invoiceFileWriteRepository = invoiceFileWriteRepository;
-        _storageService = storageService;
-        _configuration = configuration;
         _mediator = mediator;
     }
 
@@ -116,36 +83,12 @@ public class ProductController : ControllerBase
         return Ok();
     }
 
-    [HttpGet("Test")]
-    public IActionResult Test()
-    {
-        var a = _fileReadRepository.GetAll(false);
-        var b = _productImageFileReadRepository.GetAll(false);
-        var c = _invoiceFileReadRepository.GetAll(false);
-        return Ok(
-            new
-            {
-                a,
-                b,
-                c
-            }
-        );
-    }
 
-    [HttpGet("GetImage/{id}")]
-    public async Task<IActionResult> GetImage(string id)
+    [HttpGet("GetImage/{Id}")]
+    public async Task<IActionResult> GetImage([FromRoute] GetProductImagesQueryRequest request)
     {
-        Product? product = await _productReadRepository.Table
-            .Include(z => z.ProductImageFiles)
-            .FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
-
-        return Ok(product.ProductImageFiles.Select(x =>
-            new
-            {
-                Path = $"{_configuration["BaseStorageUrl"]}{x.Path}",
-                x.FileName,
-                x.Storage
-            }));
+        List<GetProductImagesQueryResponse> response = await _mediator.Send(request);
+        return Ok(response);
     }
 
     [HttpDelete("GetImage/{ProductId}")]

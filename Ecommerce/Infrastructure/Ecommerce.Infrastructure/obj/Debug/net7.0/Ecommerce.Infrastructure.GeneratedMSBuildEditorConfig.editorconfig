@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ecomerce.Infrastructure
 build_property.ProjectDir = C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Infrastructure\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

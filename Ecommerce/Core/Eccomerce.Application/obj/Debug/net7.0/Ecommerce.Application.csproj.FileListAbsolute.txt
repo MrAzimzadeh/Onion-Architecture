@@ -15,3 +15,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Appl
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.genruntimeconfig.cache
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\ref\Ecommerce.Application.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Core\Eccomerce.Application\obj\Debug\net7.0\Ecommerce.Application.sourcelink.json

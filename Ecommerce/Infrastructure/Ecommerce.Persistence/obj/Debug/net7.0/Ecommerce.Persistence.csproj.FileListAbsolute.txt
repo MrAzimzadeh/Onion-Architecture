@@ -17,3 +17,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecom
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.pdb
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.genruntimeconfig.cache
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\ref\Ecommerce.Persistence.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Infrastructure\Ecommerce.Persistence\obj\Debug\net7.0\Ecommerce.Persistence.sourcelink.json

@@ -67,3 +67,4 @@ C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecomme
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\MediatR.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\MediatR.Contracts.dll
 C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\bin\Debug\net7.0\MediatR.Extensions.Autofac.DependencyInjection.dll
+C:\Users\azimz\OneDrive\Desktop\onion_architecture\Ecommerce\Presentation\Ecommerce.API\obj\Debug\net7.0\Ecommerce.API.sourcelink.json
