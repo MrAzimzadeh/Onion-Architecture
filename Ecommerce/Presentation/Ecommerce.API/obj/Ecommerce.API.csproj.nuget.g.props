@@ -21,6 +21,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\azimz\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\azimz\.nuget\packages\newtonsoft.json\10.0.2</PkgNewtonsoft_Json>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\azimz\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_AnalyzerUtilities Condition=" '$(PkgMicrosoft_CodeAnalysis_AnalyzerUtilities)' == '' ">C:\Users\azimz\.nuget\packages\microsoft.codeanalysis.analyzerutilities\3.3.0</PkgMicrosoft_CodeAnalysis_AnalyzerUtilities>
   </PropertyGroup>
 </Project>

@@ -1,7 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)system.text.json\7.0.0\buildTransitive\net6.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\7.0.0\buildTransitive\net6.0\System.Text.Json.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
-  </ImportGroup>
-</Project>
+version https://git-lfs.github.com/spec/v1
+oid sha256:040b243e67e701fa073d3b53e4d3800a8d2c6e3c05ed3f6b18ed6a52d407b6be
+size 809

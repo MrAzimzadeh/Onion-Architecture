@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using Ecomerce.Application.Features.Commands.AppUser.CreateUser;
+using Ecomerce.Application.Features.Commands.AppUser.LoginUser;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.API.Controllers
@@ -11,5 +9,25 @@ namespace Ecommerce.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IMediator _mediator;
+
+        public UserController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Create([FromBody] CreateUserCommandRequest createUserCommandRequest)
+        {
+            CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
+            return Ok(response);
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login(LoginUserCommandRequest request)
+        {
+            LoginUserCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
     }
 }
