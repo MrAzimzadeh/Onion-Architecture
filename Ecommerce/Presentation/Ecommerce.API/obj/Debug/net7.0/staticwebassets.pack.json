@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\photo-image\\Frame-4-1.svg",
+      "PackagePath": "staticwebassets\\photo-image\\Frame-4-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\photo-image\\Frame-4-2.svg",
+      "PackagePath": "staticwebassets\\photo-image\\Frame-4-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\photo-image\\Vector-2.svg",
+      "PackagePath": "staticwebassets\\photo-image\\Vector-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\photo-image\\Vector-3.svg",
+      "PackagePath": "staticwebassets\\photo-image\\Vector-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\azimz\\OneDrive\\Desktop\\onion_architecture\\Ecommerce\\Presentation\\Ecommerce.API\\wwwroot\\photo-image\\Vector.svg",
+      "PackagePath": "staticwebassets\\photo-image\\Vector.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ecommerce.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Ecommerce.API.props",
+      "PackagePath": "build\\Ecommerce.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Ecommerce.API.props",
+      "PackagePath": "buildMultiTargeting\\Ecommerce.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Ecommerce.API.props",
+      "PackagePath": "buildTransitive\\Ecommerce.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

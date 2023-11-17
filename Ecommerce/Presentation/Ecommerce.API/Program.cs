@@ -1,3 +1,4 @@
+using System.Text;
 using Ecomerce.Application.ServiceRegistrations;
 using Ecomerce.Application.Validators.Products;
 using Ecomerce.Infrastructure.Filters;
@@ -7,6 +8,8 @@ using Ecomerce.Infrastructure.Services.Storage.Local;
 using Ecommerce.Persistence.ServiceRegistrations;
 using FluentValidation.AspNetCore;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +18,30 @@ builder.Services.AddInfrastructureService();
 builder.Services.AddApplicationService();
 
 builder.Services.AddStorage<AzureStorage>();
+// JWT Bearer
 
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme); // bu default olaraq 401 error verir
+/*
+ * bu Appe token uzerinden bir istek gelirse  bu tokeni yoxlayan da yeni dogrulayan zaman onun JWT oldugunu bidir
+ *  ve asagidaki parametrlere gore dogrulama edir
+ */
+builder.Services.AddAuthentication("Admin") //
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateAudience = true, // Audience  yoxlayir yeni istek gonderenin  kim oldugunu yoxlayir 
+            ValidateIssuer = true, // Issuer  yoxlayir yeni istek gonderenin  kim oldugunu yoxlayir
+            ValidateLifetime = true, // Yaratdigimiz tokenin omrunu yoxlayir
+            ValidateIssuerSigningKey = true, // yaradilcaq token deyerinin app e aid bir deyer olub olmadigini yoxlayir 
+            ValidAudience = builder.Configuration["Token:Audience"], // istek gonderenin  kim oldugunu yoxlayir
+            ValidIssuer = builder.Configuration["Token:Issuer"], // istek gonderenin  kim oldugunu yoxlayir
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])), 
+        };
+    });
 
 builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
-    // Fluentvalidation  Confugrations 
+// Fluentvalidation  Confugrations 
     .AddFluentValidation(
         configuration =>
         {
