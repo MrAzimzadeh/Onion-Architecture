@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[11.8.0, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.64.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.1.1, )"
@@ -214,6 +218,10 @@
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.19.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
             },
             "Microsoft.AspNetCore.Mvc.Abstractions": {
               "target": "Package",

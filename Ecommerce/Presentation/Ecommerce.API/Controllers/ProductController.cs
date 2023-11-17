@@ -19,12 +19,14 @@ using Ecomerce.Application.ViewModels.Products;
 using Ecommerce.Application.Abstractions.Storeg;
 using Ecommerce.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = "Admin")]
 public class ProductController : ControllerBase
 {
     private readonly IMediator _mediator;

@@ -10,13 +10,23 @@ using FluentValidation.AspNetCore;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureService();
 builder.Services.AddApplicationService();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Ecommerce", builder =>
+    {
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 builder.Services.AddStorage<AzureStorage>();
 // JWT Bearer
 
@@ -25,8 +35,8 @@ builder.Services.AddStorage<AzureStorage>();
  * bu Appe token uzerinden bir istek gelirse  bu tokeni yoxlayan da yeni dogrulayan zaman onun JWT oldugunu bidir
  *  ve asagidaki parametrlere gore dogrulama edir
  */
-builder.Services.AddAuthentication("Admin") //
-    .AddJwtBearer(options =>
+builder.Services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme) //
+    .AddJwtBearer("Admin", options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters()
         {
@@ -36,7 +46,8 @@ builder.Services.AddAuthentication("Admin") //
             ValidateIssuerSigningKey = true, // yaradilcaq token deyerinin app e aid bir deyer olub olmadigini yoxlayir 
             ValidAudience = builder.Configuration["Token:Audience"], // istek gonderenin  kim oldugunu yoxlayir
             ValidIssuer = builder.Configuration["Token:Issuer"], // istek gonderenin  kim oldugunu yoxlayir
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])), 
+            IssuerSigningKey =
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
         };
     });
 
@@ -77,8 +88,10 @@ app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors("Ecommerce");
 app.MapControllers();
 
 app.Run();

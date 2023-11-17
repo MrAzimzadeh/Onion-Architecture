@@ -1,4 +1,7 @@
-﻿using Ecomerce.Application.Exceptions;
+﻿using System.Security.Authentication;
+using Ecomerce.Application.Abstractions.Token;
+using Ecomerce.Application.DTOs;
+using Ecomerce.Application.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
@@ -8,12 +11,14 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, 
 {
     readonly UserManager<Ecommerce.Domain.Entities.Identity.AppUser> _userManager;
     readonly SignInManager<Ecommerce.Domain.Entities.Identity.AppUser> _signInManager;
+    readonly ITokenHadler _tokenHadler;
 
     public LoginUserCommandHandler(UserManager<Ecommerce.Domain.Entities.Identity.AppUser> userManager,
-        SignInManager<Ecommerce.Domain.Entities.Identity.AppUser> signInManager)
+        SignInManager<Ecommerce.Domain.Entities.Identity.AppUser> signInManager, ITokenHadler tokenHadler)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _tokenHadler = tokenHadler;
     }
 
     public async Task<LoginUserCommandResponse>
@@ -26,12 +31,15 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, 
             throw new NotFoundUserException("UserName or Email is not found");
         
         SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
-
         if (result.Succeeded)
         {
-            
+            Token token = _tokenHadler.CreateAccessToken(5);
+            return new LoginUserSuccesCommandResponse()
+            {
+                Token = token
+            };
         }
-        
-        throw new NotImplementedException();
+
+        throw new AuthenticationErrorException();
     }
 }

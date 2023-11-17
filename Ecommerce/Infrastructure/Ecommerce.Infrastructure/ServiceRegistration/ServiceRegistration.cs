@@ -1,9 +1,11 @@
+using Ecomerce.Application.Abstractions.Token;
 using Ecomerce.Application.Services;
 using Ecomerce.Infrastructure.Enums;
 using Ecomerce.Infrastructure.Services;
 using Ecomerce.Infrastructure.Services.Storage;
 using Ecomerce.Infrastructure.Services.Storage.Azure;
 using Ecomerce.Infrastructure.Services.Storage.Local;
+using Ecomerce.Infrastructure.Services.Token;
 using Ecommerce.Application.Abstractions.Storeg;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,6 +17,7 @@ public static class ServiceRegistration
     {
         serviceCollection.AddScoped<IStorageService, StorageService>();
         serviceCollection.AddScoped<IFileService, FileService>();
+        serviceCollection.AddScoped<ITokenHadler, TokenHandler>();
     }
 
     public static void AddStorage<T>(this IServiceCollection serviceCollection)

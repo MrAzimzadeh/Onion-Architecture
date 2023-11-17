@@ -2,5 +2,5 @@
 
 public interface ITokenHadler
 {
-    DTOs.Token CreateAccessToken(string key, string value); // jwt token acces tokende sayilir 
+    DTOs.Token CreateAccessToken(int minute); // jwt token acces tokende sayilir 
 }
